@@ -5,9 +5,15 @@ style.
 
 update-title(title="{{ art.article.header }} - MetroMed-UC")
 update-meta(name="description" content="{{ art.article.teaser[0] }}")
-update-meta(property="og:title" content="{{ art.article.header }}")
 update-meta(name="keywords" content="urgent, care, urgent care, health, health care, leesburg, emergency and urgent care loudoun, health care clinics leesburg, medical, clinic, doctor, doctors, emergency, primary care, pediatric, health care clinics leesburg, health care, health care clinic, leesburg health clinic")
 update-meta(name="author" content="MetroMed Urgent Care")
+
+update-meta(property="og:url" content="https://metromeduc.com/#/article/{{art.article.img.src}}")
+update-meta(property="og:type" content="article")
+update-meta(property="og:title" content="{{ art.article.header }}")
+update-meta(property="og:description" content="{{ art.article.teaser[0] }}")
+update-meta(property="og:image" content="https://metromeduc.com/assets/images/articles/{{ art.article.img.src }}-600x300.jpg")
+
 //- update-meta(charset="ISO-8859-1")
 //- update-meta(http-equiv="Content-Language" content="es")
 
@@ -28,22 +34,30 @@ md-content(layout-padding)
 		img(ng-src="assets/images/articles/{{art.article.img.src}}-600x300.jpg" class="md-card-image" alt="Washed Out" width="600" height="300")
 		md-card-content
 			p(ng-repeat="text in art.article.text" ng-bind-html="::text | unsafe")
+		//- Social
 		//- md-card-actions(layout="row" layout-align="begin center" style="margin-bottom:0")
 			span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share this article:
 		//- md-card-actions(layout="row" layout-align="begin center" style="margin-top:0")
-			md-button.md-icon-button(aria-label="Facebook" href="" socialshare socialshare-provider="facebook" socialshare-text="A great article about your health!" socialshare-description="asdfas" socialshare-hashtags="health, health care, article" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			//- Facebook
+			md-button.md-icon-button(aria-label="Facebook" href="" socialshare socialshare-provider="facebook" socialshare-text="A great article about your health!" socialshare-hashtags="health, health care, article" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
 				md-icon(md-svg-icon="assets/icons/facebook-circle.svg")
-			md-button.md-icon-button(aria-label="Twitter" href="" socialshare socialshare-provider="twitter" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			//- Twitter
+			md-button.md-icon-button(aria-label="Twitter" href="" socialshare socialshare-provider="twitter" socialshare-text="{{ art.article.header }}: " socialshare-hashtags="{{ art.article.keywords | limitTo: 95 }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
 				md-icon(md-svg-icon="assets/icons/twitter-circle.svg")
-			md-button.md-icon-button(aria-label="Google+" href="" socialshare socialshare-provider="google+" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			//- Google+
+			md-button.md-icon-button(aria-label="Google+" href="" socialshare socialshare-provider="google+" socialshare-text="{{ art.article.header }}" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
 				md-icon(md-svg-icon="assets/icons/google-plus-circle-color.svg")
-			md-button.md-icon-button(aria-label="Pinterest" href="" socialshare socialshare-provider="pinterest" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			//- Pinterest
+			md-button.md-icon-button(aria-label="Pinterest" href="" socialshare socialshare-provider="pinterest" socialshare-text="{{ art.article.header }}" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
 				md-icon(md-svg-src="assets/icons/pinterest.svg")
-			md-button.md-icon-button(aria-label="Linked In" href="" socialshare socialshare-provider="linkedin" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			//- LinkedIn
+			md-button.md-icon-button(aria-label="Linked In" href="" socialshare socialshare-provider="linkedin" socialshare-text="{{ art.article.header }}" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
 				md-icon(md-svg-src="assets/icons/linkedin_circle_color.svg")
-			md-button.md-icon-button(aria-label="Tumblr" href="" socialshare socialshare-provider="tumblr" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			//- Tumblr
+			md-button.md-icon-button(aria-label="Tumblr" href="" socialshare socialshare-provider="tumblr" socialshare-text="{{ art.article.header }}" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
 				md-icon(md-svg-src="assets/icons/tumblr_circle_color.svg")
-			md-button.md-icon-button(aria-label="Reddit" href="" socialshare socialshare-provider="reddit" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			//- Reddit
+			md-button.md-icon-button(aria-label="Reddit" href="" socialshare socialshare-provider="reddit" socialshare-text="{{ art.article.header }}" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
 				md-icon(md-svg-src="assets/icons/reddit_circle_color.svg")
 
 

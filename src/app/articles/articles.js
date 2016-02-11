@@ -3,6 +3,7 @@ export var articles = [
   {
     header: "The Pre-Diagnoses",
     date: 'January 31, 2016',
+    keywords: "prediagnoses, prediagnosis, pre-diagnoses, pre-diagnosis, hypertension, diabetes, pre-hypertension, pre-diabetes, diagnoses, diagnosis, higher blood pressure, higher blood sugar, HbA1c, low-salt diet",
     teaser: [
       'Used to be we had hypertension, diabetes and many other diagnoses.',
       'We still have all those diagnoses. But now we also have pre&#8209;hypertension, pre&#8209;diabetes, etc.',
