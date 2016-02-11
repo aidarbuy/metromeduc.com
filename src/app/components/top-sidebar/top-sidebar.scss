@@ -1,0 +1,59 @@
+#top-sidebar {
+	padding: 8px;
+	padding-top: 0;
+	md-card {
+		opacity: 0.9;
+		-webkit-transition: opacity 0.3s ease-out 0s;
+		-moz-transition: opacity 0.3s ease-out 0s;
+		-o-transition: opacity 0.3s ease-out 0s;
+		-ms-transition: opacity 0.3s ease-out 0s;
+		transition: opacity 0.3s ease-out 0s;
+
+		// font-size: 100%;
+		// -webkit-transition: font-size 0.3s ease-out 0s;
+		// -moz-transition: font-size 0.3s ease-out 0s;
+		// -o-transition: font-size 0.3s ease-out 0s;
+		// -ms-transition: font-size 0.3s ease-out 0s;
+		// transition: font-size 0.3s ease-out 0s;
+
+		// color: #fefefe;
+		color: white;
+		margin: 0;
+			md-card-content {
+				font-size: 110%;
+				padding-top: 0;
+				h2 {
+					// -webkit-transition: font-size 0.3s ease-out 0s;
+					// -moz-transition: font-size 0.3s ease-out 0s;
+					// -o-transition: font-size 0.3s ease-out 0s;
+					// -ms-transition: font-size 0.3s ease-out 0s;
+					// transition: font-size 0.3s ease-out 0s;
+					.accent{
+						font-size: 140%;
+
+						font-weight: bold;
+						// color: $md-accent;
+						// color: #e91e63;
+						// color: #d81b60;
+						// color: $md-hue-2;
+					}
+				}
+				p {
+					// font-size: 110%;
+					a{color:white}
+				}
+				p.p-accent{
+					font-size: 120%;
+					// font-weight: bold;
+				}
+			}
+	}
+	md-card:first-child {
+		// background: #2cbfd9;
+	}
+	md-card:hover {
+		opacity: 1;
+		// font-size: 101%;
+		// h2 {font-size:136%}
+	}
+}

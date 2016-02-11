@@ -1,0 +1,17 @@
+#doctors.md-padding
+
+	h1.md-display-1.md-primary-txt.center-txt Our Doctors
+
+	div(layout layout-wrap)
+		div(ng-repeat="d in docs.list" flex="100" flex-gt-sm="50" flex-gt-md="25")
+			md-card.md-whiteframe-4dp
+				img.md-card-image(ng-src="assets/images/doctors/{{::d.img.big}}" alt="photo of doctor {{::d.firstname + ' ' + d.lastname}}")
+
+				md-card-content
+					h2.md-title {{::d.firstname + " " + d.lastname}}
+					p(ng-bind="::d.description[0]")
+					.md-actions(layout="row" layout-align="end center")
+						md-button.md-accent(ui-sref="doctor({id:d.id})") Read more
+
+
+//- metromed-footer

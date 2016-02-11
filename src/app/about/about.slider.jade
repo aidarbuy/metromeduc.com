@@ -1,0 +1,54 @@
+#layerslider(style="width:710px; height:399px")
+	//- 14, 34
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/team/three-medics.jpg" class="ls-bg" alt="Three members of MetroMed Urgent Care team")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/doctors/trisha-820x465.jpg" class="ls-bg" alt="Doctor Patricia")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/team/orchids.jpg" class="ls-bg" alt="Orchids")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/team/karl.jpg" class="ls-bg" alt="Doctor Karl")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/primary/reception.jpg" class="ls-bg" alt="Orchids")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/doctors/roshelle-820x465.jpg" class="ls-bg" alt="Orchids")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/doctors/matthew-820x465.jpg" class="ls-bg" alt="Orchids")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/doctors/brian-820x465.jpg" class="ls-bg" alt="Orchids")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/about/x-ray-diag-710x399.jpg" class="ls-bg" alt="Orchids")
+
+	//- .ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/about/reception-820x465.jpg" class="ls-bg" alt="Orchids")
+
+	.ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		img(src="assets/images/about/lounge-820x465.jpg" class="ls-bg" alt="Orchids")
+
+	//- .ls-slide(data-ls="slidedelay:7000; transition2d: 59-61, 90, 91, 30-32, 69-72, 40-43, 92, 96, 97, 75-79, 81, 82, 86, 87-89, 93-95, 111, 103-105, 109, 112")
+		.ls-l(style="top:0px; left:50%; white-space:nowrap;" data-ls="offsetxin:0;durationin:000;delayin:1500;easingin:easeInOutExpo;rotatexin:20;scalexin:0.8;scaleyin:0.8;transformoriginin:50% 50% -150;offsetxout:0;durationout:1000;rotatexout:-20;scalexout:0.8;scaleyout:0.8;transformoriginout:50% 50% -150;")
+			iframe(src="//player.vimeo.com/video/15069551?title=0&amp;byline=0&amp;portrait=0&amp;color=f75402" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+			//- iframe(src="assets/images/about/intro.mp4" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+
+script.
+	$(document).ready(function(){
+		$('#layerslider').layerSlider({
+			autoStart: 'true',
+			showBarTimer: false,
+			pauseOnHover: false,
+			showCircleTimer: false,
+			skin: 'noskin',
+			firstSlide: 'random',
+			randomSlideshow: true
+		});
+	});

@@ -1,0 +1,24 @@
+#quote {
+	background: src('assets/images/gallery/team.jpg');
+
+	md-toolbar {
+		md-card-content {
+
+			div {
+				text-align: center;
+
+				h2 {
+				}
+
+				.md-button {
+					padding-left: 20px;
+					padding-right: 20px;
+					font-weight: bold;
+				}
+
+				h3 {}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,16 @@
+md-card#quote
+	md-toolbar.md-accent.md-hue-3
+		md-card-content
+
+			md-divider
+
+			div(layout="column" layout-align="center center")
+
+				h2.md-display-1(ng-bind="::qt.quote.title")
+
+				md-button.md-raised.md-primary.md-hue-3(href="{{::qt.phone.link}}") Call Us Now!
+					md-tooltip.tooltip-big Make a phone call to MetroMed Urgent Care
+
+				h3.md-title(ng-bind="::qt.quote.text")
+
+			md-divider

@@ -1,0 +1,127 @@
+#medical-school {
+
+  md-toolbar.md-hue-2 {
+    .md-toolbar-tools {
+      span {}
+      md-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+      h2 {
+        font-size: 17px;
+      }
+    }
+  }
+
+  md-card {
+    md-card-title {
+      md-card-title-text {
+        p {
+          font-size: 110%;
+          margin-before: 0.4em;
+          margin-after: 0.4em;
+          -webkit-margin-before: 0.4em;
+          -webkit-margin-after: 0.4em;
+          -webkit-margin-start: 0px;
+          margin-end: 10px;
+          -webkit-margin-end: 10px;
+        }
+      }
+    }
+  }
+
+
+  .md-card-header {
+    // background: red;
+    position: relative;
+    overflow: hidden;
+
+    img.md-card-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .header-wrapper {
+      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+      width: 100%; 
+      position: absolute;
+      bottom: 0px; 
+      color: white;
+      // margin-bottom: 7px;
+      // height: 50%;
+
+      h2 {
+        // padding: 45px 25px 30px 25px;
+        margin: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 0;
+      }
+
+      .md-card-header-date {
+        text-align: right;
+        padding-right: 20px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+
+  md-card-content { 
+    p {
+      font-size: 113%;
+      font-size: large;
+      .article-intro {
+        font-size: 110%;
+        font-style: italic;
+      }
+    }
+
+
+    ol.bracketed {
+      counter-reset: item;
+      margin-left: 0;
+      padding-left: .5em;
+
+      li {
+        display: block;
+        margin-bottom: .5em;
+        margin-left: 2em;
+      }
+
+      li:before {
+        display: inline-block;
+        content: "(" counter(item) ") ";
+        counter-increment: item;
+        width: 2em;
+        margin-left: -2em;
+      }
+    }
+
+    .social {
+      position: absolute;
+      right: 0px;
+
+      // background:red;
+      // text-align: right;
+      // right: 0;
+      // margin-right: 0;
+      // margin-left: auto;
+      // padding-right: 0;
+    }
+
+    .date {
+      font-style: italic;
+      text-align: right;
+      padding-right: 10px;
+      font-size: 90%;
+    }
+  }
+
+  .md-actions {
+    padding-left: 10px;
+    padding-right: 10px;
+    md-button {}
+  }
+}

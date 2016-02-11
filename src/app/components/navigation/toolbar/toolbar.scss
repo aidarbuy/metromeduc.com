@@ -1,0 +1,85 @@
+#toolbar {
+	margin:0;
+	padding:0;
+	padding-right: 10px;
+	padding-left: 10px;
+	left:0;
+	top:0;
+	z-index: 1999999998;
+	color: white;
+	.md-toolbar-tools {
+		font-size: large;
+
+		.md-button {
+			md-icon {fill: white;}
+		}
+
+		h1 {
+			font-size: inherit;
+			font-weight: inherit;
+			margin: inherit;
+		}
+
+		a:nth-child(2) {
+			md-icon {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		a { 
+			md-icon { 
+				margin-right: 5px;
+				fill: white;
+			};
+		}
+
+		a:nth-child(5) { md-icon { margin-left: 15px; } }
+
+		a:nth-child(7) { md-icon { margin-left: 15px; } }
+
+		a.toolbar-phone {
+			// background: red;
+			// md-icon {color: rgb(197,17,98)}
+			// color: rgb(197,17,98)
+			font-weight: bold;
+
+			md-icon.margin-left {
+					// background: red;
+					margin-left:10px;
+				}
+		}
+
+		.md-fab.md-accent { md-icon { margin-left: 5px; } }
+
+		a:nth-last-child(2) { 
+			md-icon { 
+				margin-left: 15px;
+				padding-top: 2px;
+			} 
+		}
+
+		.md-button.login-btn {
+			// background: red;
+			// width: 20px;
+			min-width: 50px;
+			// padding: 0;
+			// margin: 0;
+			md-icon {
+				margin: 0;
+			}
+		}
+	}
+}
+
+#masthead-positioner {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1999999999;
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}

@@ -1,0 +1,69 @@
+#doctors {
+
+	h1{}
+
+	div {
+		div {
+			md-card {
+				// background: red;
+				// height: 550px;
+				img {
+					position: inherit;
+					overflow: hidden;
+					// background: red;
+					// padding: 20px;
+					// width: 100%;
+					max-width: intrinsic;
+					max-width: -moz-max-content;
+					max-width: 100%;
+					// width: auto;
+					// height: 100%;
+					// height: auto;
+					// max-height: auto;
+					max-height: -moz-max-content;
+					// max-height: 100%;
+					// display: block;
+					// width: 100%;
+					// height: 100%;
+				}
+
+				md-card-content {
+					h2 {}
+
+					p {}
+
+					.md-actions {
+						.md-button {}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 480, 600, 840, 960, 1280, 1440, and 1600dp.
+
+// @media screen and (max-width: 1440px) {
+// 	#doctors div md-card {
+// 		// background: red;
+// 		height: 600px;
+// 	}
+// }
+// @media screen and (max-width: 1199px) {
+// 	#doctors div md-card {
+// 		// background: red;
+// 		height: 550px;
+// 	}
+// }
+// @media screen and (max-width: 950px) {
+// 	#doctors div md-card {
+// 		// background: red;
+// 		height: 520px;
+// 	}
+// }
+// @media screen and (max-width: 600px) {
+// 	#doctors div md-card {
+// 		// background: red;
+// 		height: auto;
+// 	}
+// }

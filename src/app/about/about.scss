@@ -1,0 +1,64 @@
+#about {	
+	md-card {
+		md-card-content {
+
+			h1 {
+				color: $md-primary;
+				text-align: center;
+			}
+
+			h2 {
+				color: $md-hue-2;
+				text-align: center;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 110%;
+				tr {
+					height: 45px;
+					td {
+						width: 50%;
+						border: 1px solid $md-primary;
+						margin: 0;
+						padding-left: 10px;
+						padding-right: 10px;
+						vertical-align: middle;
+					}
+				}
+				tr:nth-child(even) {background: #f7f7f7}
+			}
+
+			md-list {
+				md-list-item {
+					md-icon {
+						width: 10px;
+						margin-right: 10px;
+					}
+					p {font-size: large}
+					md-divider {}
+				}
+			}
+
+			h2 {}
+		}
+	}
+
+	md-card {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			position: relative;
+			// min-width: 100%;
+			// min-height: 100%;
+		}
+		md-card-content {
+			h2 {}
+			ul {
+				li {}
+			}
+		}
+	}
+}

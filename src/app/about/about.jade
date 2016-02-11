@@ -1,0 +1,45 @@
+#about.md-padding(layout="row" layout-wrap)
+
+
+	//- Welcome to MetroMed Urgent Care
+	div(flex="100" flex-gt-md="50")
+		md-card.md-whiteframe-4dp
+			md-card-content
+				h1.md-display-1(ng-bind="::about.welcome.title")
+
+				//- Image
+				md-card.md-whiteframe-4dp
+					md-card-content(style="padding:10px")
+						.md-card-image(ng-include="'app/about/about.slider.html'" hide show-gt-sm)
+						div(hide-gt-sm)
+							img.md-card-image(src="assets/images/team/three-medics.jpg" alt="Three members of MetroMed Urgent Care team")
+
+				h2.md-headline(ng-bind="::about.welcome.header")
+
+				div(ng-bind-html="::about.welcome.conditionsTable | unsafe" hide show-gt-sm)
+
+				md-list(hide-gt-sm)
+					md-list-item(ng-repeat="i in about.welcome.conditions")
+						md-icon(md-svg-icon="assets/icons/checkmark.svg")
+						p(ng-bind="::i")
+						md-divider
+
+				//- Note
+				h2.md-subhead(ng-bind="::about.welcome.asterix")
+
+
+	//- Why MetroMed Urgent Care
+	div(flex="100" flex-gt-md="50")
+		md-card.md-whiteframe-4dp
+			br(hide show-gt-md)
+			div(hide-gt-md)
+				img.md-card-image(src="assets/images/team/orchids.jpg" alt="Three members of MetroMed Urgent Care team")
+			md-card-content 
+				h2.md-display-1(ng-bind="::about.whyMetroMed.title")
+				ul.md-list.md-title
+					li.md-list-item(ng-repeat="a in about.whyMetroMed.items")
+						p(ng-bind-html="::a | unsafe")
+						md-divider(ng-if="!$last")
+
+
+//- metromed-footer

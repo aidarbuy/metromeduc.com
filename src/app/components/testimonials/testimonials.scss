@@ -1,0 +1,33 @@
+md-card#testimonials {
+	md-toolbar {
+		.md-toolbar-tools {	
+			md-icon {
+				width: 40px;
+				height: 40px;
+				margin-right: 10px;
+			}
+			span {}
+			h2 {}
+		}
+	}
+
+	md-card-content {
+		md-list {
+			md-list-item {
+				img {
+					width: 70px;
+					height: 70px;
+				}
+				.md-list-item-text {	
+					h3 { font-size: x-large }
+					h4 { font-size: large }
+					p { font-size: large }
+				}
+				md-divider {
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

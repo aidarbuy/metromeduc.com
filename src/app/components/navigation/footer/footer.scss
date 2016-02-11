@@ -1,0 +1,35 @@
+#footer {
+	.md-toolbar-tools {		
+		p {
+			color: #eee;
+			font-size: small;
+			// text-shadow: 1px 1px #333;
+		}
+		span {}
+
+		.md-button {
+			// background: red;
+			margin: 0;
+			padding: 0;
+			// padding-top: 13px;
+			min-width: 60px;
+			md-icon {
+				// background: yellow;
+				margin: 0;
+				padding: 0;
+				// margin-top: 10px;
+				// padding-top: 10px;
+			}
+		}
+
+		// Social buttons
+		span {
+			.md-button {
+				margin: 0;
+				// margin-top: 10px;
+				// padding: 10px 0;
+				md-icon {}
+			}
+		}
+	}
+}

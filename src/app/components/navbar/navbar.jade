@@ -1,0 +1,59 @@
+md-toolbar(layout="row" layout-align="center center")
+
+	md-button(href="https://github.com/Swiip/generator-gulp-angular") Gulp Angular
+
+	section(flex layout="row" layout-align="left center")
+		md-button(href="#" class="md-raised") Home
+		md-button(href="#" class="md-raised") About
+		md-button(href="#" class="md-raised") Contact
+
+	md-button.acme-navbar-text Application was created {{ vm.relativeDate }}.
+
+//- md-toolbar#toolbar.md-whiteframe-z2(layout="row")
+	.md-toolbar-tools(layout="row" layout-align="center center")
+
+		//- Menu button
+		md-button.md-icon-button(ng-click="tb.toggleSidenav('left')" hide-gt-md)
+			md-icon(md-svg-src="assets/icons/menu.svg" aria-label="Menu")
+
+		//- Brand
+		a(ui-sref="home" layout="row" layout-align="start center" hide-gt-lg)
+			md-icon(md-svg-src="assets/icons/logo.svg")
+			h1(hide show-gt-sm) MetroMed Urgent Care
+			h1(hide-gt-sm) MetroMed UC
+
+		span(flex)
+
+		//- Address
+		a(ui-sref="map" hide-md hide-sm layout="row")
+			md-icon(md-svg-src="assets/icons/ic_place_24px.svg")
+			span 952 Edwards Ferry Road NE Leesburg VA
+			span(hide) &nbsp;20176
+
+		//- Phone
+		a.toolbar-phone(href="tel:(703) 687-4158" hide-sm layout="row")
+			md-icon(md-svg-src="assets/icons/ic_phone_24px.svg")
+			span (703) 687-4158
+		md-button.md-fab.md-accent(href="tel:(703) 687-4158" aria-label="Call MetroMed Urgent Care" hide-gt-sm style="margin-right:0")
+			md-icon(md-svg-src="assets/icons/ic_phone_24px.svg")
+
+		//- Email
+		a(href="mailto:info@metromeduc.com" hide-sm hide-md hide-lg layout="row")
+			md-icon(md-svg-src="assets/icons/ic_email_24px.svg")
+			span info@metromeduc.com
+
+		//- Login
+		//- a(ui-sref="login" hide show-gt-lg layout="row" ng-if="!tb.authData")
+			md-icon(md-svg-src="assets/icons/enter.svg" aria-label="Login")
+			span.toolbar-label Login
+		//- md-button.login-btn(ui-sref="login" aria-label="Login MetroMed Urgent Care" hide-gt-lg ng-if="!tb.authData")
+			md-tooltip(md-direction="left") Login
+			md-icon(md-svg-src="assets/icons/enter.svg")
+
+		//- Profiles
+		//- a(ui-sref="profile" hide show-gt-lg layout="row" ng-if="tb.authData")
+			md-icon(md-svg-src="assets/icons/enter.svg" aria-label="Profile")
+			span.toolbar-label Profile
+		//- md-button.login-btn(ui-sref="profile" aria-label="Profile of user of MetroMed Urgent Care" hide-gt-lg ng-if="tb.authData")
+			md-tooltip(md-direction="left") Show user profile
+			md-icon(md-svg-src="assets/icons/person.svg")

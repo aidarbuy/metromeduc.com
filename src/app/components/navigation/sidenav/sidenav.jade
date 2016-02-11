@@ -1,0 +1,48 @@
+//- md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left" md-is-locked-open="$mdMedia('gt-md')")
+  md-toolbar.md-theme-indigo
+    h1.md-toolbar-tools Sidenav Left
+
+  md-content(layout-padding)
+    md-button.md-primary(ng-click="close()" hide-gt-md) Close Sidenav Left
+    p(hide-md show-gt-md) This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
+
+
+md-sidenav.md-sidenav-left.md-whiteframe-z2(layout="column" md-component-id="left" md-is-locked-ope="$mdMedia('gt-lg')")
+
+  //- Logo
+  md-toolbar.md-hue-2(ng-click="tb.toggleSidenav('left')")
+    //- span(flex)
+    .md-toolbar-tools-bottom.inset(layout="column" layout-align="start center")
+      //- user-avatar(layout="column")
+      md-icon(md-svg-src="assets/icons/logo.svg")
+      h2.md-headline MetroMed
+      h2.md-headline Urgent Care
+      //- span
+      .md-body-2 952 Edwards Ferry Road NE
+      .md-body-1 Leesburg VA 20176
+
+  //- Menu
+  md-list
+    md-list-item(ng-repeat="i in sn.menu")
+      md-button.md-primary.md-hue-2(ui-sref="{{::i.state}}" ng-click="sn.toggleSidenav('left', i.path)" aria-label="{{::i.title}}" ng-class="{'md-raised md-hue-3':sn.isSelected(i.path)}")
+        .menu-item(layout="row" layout-align="start center")
+          md-icon(md-svg-src="assets/icons/{{::i.icon}}.svg" aria-label="{{::i.icon}}")
+          div(ng-bind="::i.title")
+        md-divider
+
+    br
+    //- md-divider(style="margin-top:5px; margin-bottom:5px")
+    //- Contact Info
+    md-toolbar.md-primary.md-hue-2
+      //- span(flex)
+      .md-toolbar-tools(style="font-size:small") Contact Info:
+    //- md-subheader(style="padding-top:10px") Contact Info:
+    md-divider
+    md-list-item(ng-repeat="i in sn.contact | limitTo:2")
+      md-button.md-primary.md-hue-2(aria-label="{{::i.title}}" href="{{::i.link}}")
+        .menu-item(layout="row" layout-align="start center")
+          //- i.material-icons {{i.icon}}
+          md-icon(md-svg-src="assets/icons/{{::i.icon}}.svg" aria-label="{{::i.icon}}")
+          div.contact-title(ng-bind="::i.title")
+        //- md-divider(ng-if="!$last")
+        md-divider

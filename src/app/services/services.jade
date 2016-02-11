@@ -1,0 +1,22 @@
+#services.md-padding
+
+	h1.md-display-1.md-primary-txt.center-txt Our Services {{srv[0].title}}
+
+	div(layout="row" layout-wrap)
+		div.repeated-service(ng-repeat="s in srv.prices" flex="25" flex-md="50" flex-sm="100")
+			md-card.md-whiteframe-z2
+				md-toolbar.md-hue-2(layout="row" layout-align="center center")
+					h2.md-headline(ng-bind="::s.title")
+
+				md-card-content(layout="column" layout-align="start center")
+					h3.md-display-3 ${{::s.price}}
+					h4.md-headline ONE TIME FEE
+
+					md-list
+						md-list-item(ng-repeat="i in s.list")
+							md-icon(md-svg-icon="assets/icons/checkmark.svg")
+							p(ng-bind="::i")
+							md-divider(ng-if="!$last")
+
+
+//- metromed-footer

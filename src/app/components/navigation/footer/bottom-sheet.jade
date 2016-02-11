@@ -1,0 +1,9 @@
+md-bottom-sheet.md-grid
+	//- (layout="column" layout-align="center center")
+	md-toolbar.md-primary.md-hue-2
+		.md-toolbar-tools Visit us in social networks:
+	md-list
+		md-list-item(ng-repeat="item in bs.items | limitTo:3")
+			md-button.md-grid-item-content.md-primary.md-hue-2(href="{{::item.href}}" aria-label="{{::item.name}}")
+				md-icon(md-svg-src="assets/icons/{{::item.icon}}.svg" style="width:48px; height:48px")
+				.md-grid-text(ng-bind="::item.name")
