@@ -69,7 +69,7 @@ angular.module('metromed', [
     'ngAnimate', 'ngCookies', 'ngSanitize', 'ngMessages', 
     'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 
     'updateMeta', 'toastr', 'uiGmapgoogle-maps', 
-    '720kb.socialshare'
+    '720kb.socialshare', 'ngSocial'
   ])
   .constant('malarkey', malarkey)
   .constant('moment', moment)

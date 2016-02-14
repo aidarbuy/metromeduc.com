@@ -3,7 +3,7 @@
 	h1.md-display-1.md-primary-txt.center-txt Our Services {{srv[0].title}}
 
 	div(layout="row" layout-wrap)
-		div.repeated-service(ng-repeat="s in srv.prices" flex="25" flex-md="50" flex-sm="100")
+		div.repeated-service(ng-repeat="s in srv.prices" flex="100" flex-gt-xs="50" flex-gt-md="25")
 			md-card.md-whiteframe-z2
 				md-toolbar.md-hue-2(layout="row" layout-align="center center")
 					h2.md-headline(ng-bind="::s.title")

@@ -1,5 +1,6 @@
 export function config ($logProvider, toastrConfig, $mdThemingProvider, uiGmapGoogleMapApiProvider) {
   'ngInject';
+
   // Enable log
   $logProvider.debugEnabled(true);
 

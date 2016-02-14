@@ -1,4 +1,4 @@
-md-card#testimonials.md-whiteframe-z2
+md-card#testimonials.md-whiteframe-4dp
 	md-toolbar.md-hue-2
 		.md-toolbar-tools(layout="row")
 			span(flex)
@@ -13,5 +13,6 @@ md-card#testimonials.md-whiteframe-z2
 				.md-list-item-text
 					h3(ng-bind="::t.name")
 					h4(ng-bind="::t.city")
+					br
 					p(ng-bind="::t.text")
 				md-divider(md-inset ng-if="!$last")

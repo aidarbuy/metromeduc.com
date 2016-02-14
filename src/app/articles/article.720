@@ -1,0 +1,49 @@
+
+
+		//- md-card-actions(layout="row" layout-align="begin center" style="margin-top:0")
+
+			//- Facebook
+			//- md-button.md-icon-button(aria-label="Facebook" href="" socialshare socialshare-provider="facebook" socialshare-text="{{ art.article.header }}" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+			a.md-icon-button(aria-label="Facebook" href="" socialshare socialshare-provider="facebook" socialshare-text="{{ art.article.header }}" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+				md-icon(md-svg-icon="assets/icons/facebook-circle.svg")
+
+			//- Twitter
+			md-button.md-icon-button(aria-label="Twitter" href="" socialshare socialshare-provider="twitter" socialshare-text="{{ art.article.header }}: " socialshare-hashtags="{{ art.article.keywords | limitTo: 95 }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+				md-icon(md-svg-icon="assets/icons/twitter-circle.svg")
+
+			//- Google+
+			md-button.md-icon-button(aria-label="Google+" href="" socialshare socialshare-provider="google+" socialshare-text="{{ art.article.header }}" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+				md-icon(md-svg-icon="assets/icons/google-plus-circle-color.svg")
+
+			//- Pinterest
+			md-button.md-icon-button(aria-label="Pinterest" href="" socialshare socialshare-provider="pinterest" socialshare-text="{{ art.article.header }}" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+				md-icon(md-svg-src="assets/icons/pinterest.svg")
+
+			//- LinkedIn
+			md-button.md-icon-button(aria-label="Linked In" href="" socialshare socialshare-provider="linkedin" socialshare-text="{{ art.article.header }}" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+				md-icon(md-svg-src="assets/icons/linkedin_circle_color.svg")
+
+			//- Tumblr
+			md-button.md-icon-button(aria-label="Tumblr" href="" socialshare socialshare-provider="tumblr" socialshare-text="{{ art.article.header }}" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+				md-icon(md-svg-src="assets/icons/tumblr_circle_color.svg")
+
+			//- Reddit
+			md-button.md-icon-button(aria-label="Reddit" href="" socialshare socialshare-provider="reddit" socialshare-text="{{ art.article.header }}" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="https://metromeduc.com/#/article/{{art.article.img.src}}")
+				md-icon(md-svg-src="assets/icons/reddit_circle_color.svg")
+
+
+			//- Social Share
+			//- div
+				div Share this article:
+				a(href="#" socialshare socialshare-provider="facebook" socialshare-text="A great article about your health!" socialshare-hashtags="health, health care, article" socialshare-url="https://metromeduc.com/")
+					md-icon(md-svg-src="assets/icons/facebook.svg" aria-label="Menu")
+				a(href="#" socialshare socialshare-provider="twitter" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="http://720kb.net")
+					md-icon(md-svg-src="assets/icons/twitter.svg" aria-label="Menu")
+				a(href="#" socialshare socialshare-provider="google+" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="http://720kb.net")
+					md-icon(md-svg-src="assets/icons/google-plus.svg" aria-label="Menu")
+				//- a(href="#" socialshare socialshare-provider="pinterest" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="http://720kb.net")
+					md-icon(md-svg-src="assets/icons/pinterest.svg" aria-label="Menu")
+				//- a(href="#" socialshare socialshare-provider="tumblr" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="http://720kb.net")
+					md-icon(md-svg-src="assets/icons/tumblr.svg" aria-label="Menu")
+				//- a(href="#" socialshare socialshare-provider="reddit" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="{{ art.article.keywords }}" socialshare-url="http://720kb.net")
+					md-icon(md-svg-src="assets/icons/reddit.svg" aria-label="Menu")

@@ -7,7 +7,7 @@ md-card#medical-school.md-whiteframe-4dp
       h2 Nano Medical School for Patients
       span(flex)
 
-  md-card(ng-repeat="article in ms.articles")
+  md-card(ng-repeat="article in ms.articles | limitTo: 4")
     md-card-title
       md-card-title-text
         span.md-headline(ng-bind="::article.header")

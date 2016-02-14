@@ -14,6 +14,9 @@ md-card#testimonials {
 	md-card-content {
 		md-list {
 			md-list-item {
+				padding-top: 20px;
+				padding-bottom: 20px;
+
 				img {
 					width: 70px;
 					height: 70px;
@@ -21,7 +24,7 @@ md-card#testimonials {
 				.md-list-item-text {	
 					h3 { font-size: x-large }
 					h4 { font-size: large }
-					p { font-size: large }
+					p { font-size: 110% }
 				}
 				md-divider {
 					left: 0;
