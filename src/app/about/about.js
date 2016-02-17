@@ -15,7 +15,7 @@ var About = {
             'Bed-side Ultrasound Screening',
             'X-Ray',
             'Skillfully done procedures, such as:<ul><li>Joint aspiration</li><li>Ingrown toenail removal</li><li>Foreign body removal from the eye</li><li>Reduction of fractures and dislocations</li></ul>',
-            'Prices guaranteed to be the lowest in the area',
+            // 'Prices guaranteed to be the lowest in the area',
             'Laboratory and Pharmacy',
             'IV treatment and EKG',
             'Location. Yes, we are right next to Wal-Mart',

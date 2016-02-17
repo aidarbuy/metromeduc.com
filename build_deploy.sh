@@ -2,6 +2,7 @@
 # declare STRING variable
 STRING="done."
 #print variable on a screen
+clear
 echo "Cleaning dist directory:"
 gulp clean
 echo $STRING

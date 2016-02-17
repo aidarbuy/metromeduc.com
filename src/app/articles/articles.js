@@ -33,7 +33,7 @@ export var articles = [
     date: 'December 6, 2015',
     teaser: [
       'Here are some tips on how to not spend exorbitant amounts on medications unnecessarily:',
-      'Obtain a copy of your insurance company’s <b>Drug Formulary</b> and take it with you to every doctor appointment. The formulary is a listing of which medications are covered by your insurance.',
+      'Obtain a copy of your insurance company’s Drug Formulary and take it with you to every doctor appointment. The formulary is a listing of which medications are covered by your insurance.',
       'When the doctor is prescribing you a medication, show them the formulary so that they can choose a medication covered by your plan.'
     ],
     text: [

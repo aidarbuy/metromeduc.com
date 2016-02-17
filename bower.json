@@ -19,9 +19,8 @@
     "angular": "~1.4.2",
     "gsap": "^1.18.2",
     "angular-google-maps": "^2.3.1",
-    "angular-socialshare": "angularjs-socialshare#^0.1.20",
     "angular-update-meta": "^1.8.0",
-    "angular-social": "^1.0.0"
+    "angular-socialshare": "^1.4.5"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"
