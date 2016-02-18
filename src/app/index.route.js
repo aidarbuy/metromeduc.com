@@ -132,6 +132,16 @@ export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvi
 				// Constant title
 				$title: function() { return 'Profile'; }
 			}
+		})
+		.state('calendar', {
+			url: '/calendar',
+			templateUrl: 'app/calendar/calendar.html',
+			controller: 'CalendarController',
+			controllerAs: 'ca',
+			resolve: {
+				// Constant title
+				$title: function() { return 'Calendar'; }
+			}
 		});
 
 	$urlRouterProvider.otherwise('/');

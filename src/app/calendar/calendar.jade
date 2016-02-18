@@ -1,0 +1,27 @@
+#scheduling.md-padding(ng-cloak)
+
+  h1.md-display-1.md-primary-txt.center-txt.md-padding Calendar
+
+  .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSources")
+
+  //- div.md-padding
+    //- fieldset.standard
+      legend 
+        | Using 
+        code ng-model
+    div(layout="column" layout-wrap layout-gt-sm="row")
+      div(flex-xs flex="50")
+      //- were doing one day with 1 time slot for simplicity
+      //- we'll use angular's ng-repeat in a bit to get the other days and times
+      .row.times
+        .center-txt(ng-repeat="day in days")
+          h2 {{day.name}}
+
+          .time-slot(ng-repeat="slot in day.slots")
+            input(type="checkbox" id="{{day.name}}-{{$index}}" ng-model="slot.booked" ng-disabled="slot.booked")
+            label(for="{{day.name}}-{{$index}}") {{slot.time}}
+              span(ng-if="slot.booked") Booked
+              span(ng-if="!slot.booked") Available
+
+      p.center-txt
+        md-button.md-warn.md-raised(href="" ng-click="sc.reset()") Reset

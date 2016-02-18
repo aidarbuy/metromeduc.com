@@ -1,15 +1,15 @@
-export function config ($logProvider, toastrConfig, $mdThemingProvider, uiGmapGoogleMapApiProvider) {
+export function config ($logProvider, $mdThemingProvider, uiGmapGoogleMapApiProvider) {
   'ngInject';
 
   // Enable log
   $logProvider.debugEnabled(true);
 
   // Set options third-party lib
-  toastrConfig.allowHtml = true;
-  toastrConfig.timeOut = 3000;
-  toastrConfig.positionClass = 'toast-top-right';
-  toastrConfig.preventDuplicates = true;
-  toastrConfig.progressBar = true;
+  // toastrConfig.allowHtml = true;
+  // toastrConfig.timeOut = 3000;
+  // toastrConfig.positionClass = 'toast-top-right';
+  // toastrConfig.preventDuplicates = true;
+  // toastrConfig.progressBar = true;
 
   // Configuring default theme
   $mdThemingProvider.theme('default')

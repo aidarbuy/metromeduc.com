@@ -71,8 +71,7 @@ md-content(layout-padding)
 					data-description="{{art.article.teaser[0] + ' ' + art.article.teaser[1] + ' ' + art.article.teaser[2]}}"
 					data-email="info@metromeduc.com"
 					data-shares='shares'
-				) {{ shares }} 
-				&nbsp;&nbsp;&nbsp;
+				) {{ shares }}
 
 				//- Twitter
 				//- data-lang: Language of the tweet
@@ -89,8 +88,8 @@ md-content(layout-padding)
 					data-via='metromeduc' 
 					data-size="medium" 
 					data-text='{{art.article.teaser[0]}}'
+					style="margin-left:10px;margin-right:6px"
 				)
-				&nbsp;&nbsp;
 
 				//- Google +
 				.g-plus(gplus 
@@ -99,7 +98,6 @@ md-content(layout-padding)
 					data-href='https://metromeduc.com/article/{{art.article.img.src}}' 
 					data-action='share'
 				)
-				&nbsp;&nbsp;
 
 				//- Linkedin
 				.linkedinShare(linkedin 
@@ -107,8 +105,8 @@ md-content(layout-padding)
 					data-title='{{art.article.header}}' 
 					data-summary="{{art.article.teaser[0] + ' ' + art.article.teaser[1] + ' ' + art.article.teaser[2]}}" 
 					data-shares='linkedinshares'
+					style="margin-left:0px"
 				) {{linkedinshares}}
-				&nbsp;&nbsp;&nbsp;
 
 				//- Tumblr
 				//- data-url: URL of the content to be shared
@@ -123,8 +121,8 @@ md-content(layout-padding)
 					data-buttontext='Sharing Text' 
 					data-styling="display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('https://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;" 
 					data-description='{{art.article.teaser[0] + " " + art.article.teaser[1] + " " + art.article.teaser[2]}}'
+					style="margin-left:10px"
 				)
-				&nbsp;&nbsp;&nbsp;
 
 				//- Pinterest
 				//- data-href: Url To be shared
@@ -137,4 +135,6 @@ md-content(layout-padding)
 					data-description='{{art.article.teaser[0] + " " + art.article.teaser[1] + " " + art.article.teaser[2]}}' 
 					data-img='https://metromeduc.com/assets/images/articles/{{ art.article.img.src }}-600x300.jpg' 
 					data-pin-do='buttonPin' 
-					data-pin-config='beside')
+					data-pin-config='beside'
+					style="margin-left:10px"
+				)

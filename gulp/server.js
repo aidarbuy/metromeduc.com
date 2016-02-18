@@ -54,22 +54,22 @@ function browserSyncInit(baseDir, browser) {
   // server.middleware = proxyMiddleware('/articles', {target: '/'});
   // server.middleware = proxyMiddleware('/articles', {target: '/index.html'});
   // server.middleware = proxyMiddleware('/articles', {target: 'localhost:3000/index.html'});
-  server.middleware = proxyMiddleware('/article', {
+  // server.middleware = proxyMiddleware('/article', {
     // target: 'http://localhost:3000/index.html', // target host
     // target: '/', // target host
-    target: 'http://localhost:3000/', // target host
+    // target: 'http://localhost:3000/', // target host
     // changeOrigin: true,               // needed for virtual hosted sites
     // ws: true,                         // proxy websockets
-    pathRewrite: {
+    // pathRewrite: {
       // '^/old/api' : '/new/api'      // rewrite paths
-      '/article' : '/'      // rewrite paths
-    },
+      // '/article' : '/'      // rewrite paths
+    // },
     // proxyTable: {
     //   // when request.headers.host == 'dev.localhost:3000',
     //   // override target 'http://www.example.org' to 'http://localhost:8000'
     //   'dev.localhost:3000' : 'http://localhost:8000'
     // }
-  });
+  // });
 
   browserSync.instance = browserSync.init({
     startPath: '/',
