@@ -1,4 +1,4 @@
-export function config ($logProvider, $mdThemingProvider, uiGmapGoogleMapApiProvider) {
+export function config ($logProvider, $mdThemingProvider, uiGmapGoogleMapApiProvider, usSpinnerConfigProvider) {
   'ngInject';
 
   // Enable log
@@ -27,4 +27,10 @@ export function config ($logProvider, $mdThemingProvider, uiGmapGoogleMapApiProv
     v: '3.20', //defaults to latest 3.X anyhow
     libraries: 'weather,geometry,visualization'
   });
+
+  // $windowProvider.Stripe.setPublishableKey('pk_test_qj7EuqutFInexh32vAGo41V8');
+
+  usSpinnerConfigProvider.setDefaults({color: 'blue'});
+  usSpinnerConfigProvider.setTheme('bigBlue', {color: 'blue', radius: 20});
+  usSpinnerConfigProvider.setTheme('smallRed', {color: 'red', radius: 6});
 }

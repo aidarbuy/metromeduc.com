@@ -142,6 +142,16 @@ export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvi
 				// Constant title
 				$title: function() { return 'Calendar'; }
 			}
+		})
+		.state('pay', {
+			url: '/pay',
+			templateUrl: 'app/pay/pay.html',
+			controller: 'PayController',
+			controllerAs: 'pay',
+			resolve: {
+				// Constant title
+				$title: function() { return 'Pay'; }
+			}
 		});
 
 	$urlRouterProvider.otherwise('/');

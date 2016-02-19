@@ -24,7 +24,10 @@
     "firebase": "^2.4.0",
     "fullcalendar": "^2.6.0",
     "angular": "^1.5.0",
-    "angular-ui-calendar": "^1.0.1"
+    "angular-ui-calendar": "^1.0.1",
+    "angular-load": "^0.4.1",
+    "angular-payments": "2472bc9befa25678",
+    "angular-spinner": "^0.8.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"

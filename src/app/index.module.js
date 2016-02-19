@@ -63,6 +63,9 @@ import { ArticlesFactory } from './articles/articles.fctr';
 // Scheduling
 import { CalendarController } from './calendar/calendar.ctrl';
 
+// Pay
+import { PayController } from './pay/pay.ctrl';
+
 // Footer
 import { FooterDirective } from '../app/components/navigation/footer/footer.drct';
 import { GridBottomSheetCtrl } from '../app/components/navigation/footer/bottom-sheet.ctrl';
@@ -73,7 +76,7 @@ angular.module('metromed', [
     'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 
     'updateMeta', 'toastr', 'uiGmapgoogle-maps', 
     'djds4rce.angular-socialshare', 'firebase',
-    'ui.calendar'
+    'ui.calendar', 'angularLoad', 'angularPayments', 'angularSpinner'
   ])
   .constant('malarkey', malarkey)
   .constant('moment', moment)
@@ -139,6 +142,9 @@ angular.module('metromed', [
 
   // Calendar
   .controller('CalendarController', CalendarController)
+
+  // Pay
+  .controller('PayController', PayController)
 
   // Footer
   .controller('GridBottomSheetController', GridBottomSheetCtrl)

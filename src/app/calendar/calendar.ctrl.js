@@ -84,9 +84,9 @@ export class CalendarController {
     /* add custom event*/
     $scope.addEvent = function() {
       $scope.events.push({
-        title: 'Open Sesame',
-        start: new Date(y, m, 28),
-        end: new Date(y, m, 29),
+        title: 'New appointment',
+        start: new Date(y, m, d, 11, 0),
+        end: new Date(y, m, d, 12, 0),
         className: ['openSesame']
       });
     };
@@ -132,8 +132,17 @@ export class CalendarController {
         eventColor: '#2cbfd9',
         // slotLabelInterval: '02:00:00',
         // selectable: true,
+        customButtons: {
+          addEventButton: {
+            text: 'Add an appointment',
+            click: function() {
+              // alert('clicked the custom button!');
+              $scope.addEvent();
+            }
+          }
+        },
         header: {
-          left: 'month agendaWeek agendaDay',
+          left: 'month agendaWeek agendaDay addEventButton',
           center: 'title',
           right: 'today prev,next'
         },
