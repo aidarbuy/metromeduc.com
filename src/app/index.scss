@@ -142,10 +142,24 @@ md-content.md-default-theme {
 	font-size: 110%;
 }
 
-
 md-toolbar.md-accent > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
 	color: rgb(240,240,240);
 }
+
+.tooltip-big { font-size: 120% }
+
+
+// Stick to screen
+.stick-to-screen {
+	box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+	-webkit-transition: box-shadow 0.4s;
+	transition: box-shadow 0.4s;
+}
+.stick-to-screen:hover {
+	// box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12);
+	box-shadow: 0 6px 6px -3px rgba(0,0,0,.2),0 10px 14px 1px rgba(0,0,0,.14),0 4px 18px 3px rgba(0,0,0,.12);
+}
+
 
 section.jumbotron {
   margin-bottom: 30px;

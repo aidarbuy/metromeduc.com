@@ -4,7 +4,7 @@
 
 	div(layout layout-wrap)
 		div(ng-repeat="d in docs.list" flex="100" flex-gt-sm="50" flex-gt-md="25")
-			md-card.md-whiteframe-4dp
+			md-card.md-whiteframe-4dp.stick-to-screen
 				img.md-card-image(ng-src="assets/images/doctors/{{::d.img.big}}" alt="photo of doctor {{::d.firstname + ' ' + d.lastname}}")
 
 				md-card-content
