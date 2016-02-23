@@ -24,5 +24,8 @@ class FooterController {
 				// targetEvent: $event
 			});
 		};
+
+		// this.getDate = new Date();
+		// console.log(this.getDate.getDay());
 	}
 }

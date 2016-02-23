@@ -43,18 +43,26 @@ export class CalendarController {
     // Adding doctors to events
 
     // Doctor 1
+    var monthArray = [29, 31];
     var eventObject;
-    var roshelle = [-18,-17,-16,-14,-12,-9,-8,-6,-5,-4,-1,0,1,3,5,6,8,9,11,12,14,15,17,18,19];
-    for (var i = roshelle.length - 1; i >= 0; i--) {
-      eventObject = {
-        title: 'Doctor 1', 
-        start: new Date(y, m, d + roshelle[i]), 
-        allDay: true, 
-        rendering: 'background',
-        className: ['calendarRoshelle']
-      };
-      $scope.events.push(eventObject);
+    // var roshelle = [-18,-17,-16,-14,-12,-9,-8,-6,-5,-4,-1,0,1,3,5,6,8,9,11,12,14,15,17,18,19];
+
+    for (var j = 0; j <= monthArray.length - 1; j++) {
+      for (var i = 1; i <= monthArray[j]; i++) {
+        eventObject = {
+          title: 'Dr. Roshelle Beckwith', 
+          start: new Date(y, m+j, i), 
+          allDay: true, 
+          rendering: 'background',
+          className: ['calendarRoshelle']
+        };
+
+        if (eventObject.start.getDay() != 0) {
+          $scope.events.push(eventObject);
+        }
+      }
     }
+
 
     // Doctor 2
     var doc2 = [-19,-17,-15,-11,-10,-8,-6,-5,-4,-1,0,1,3,5,6,8,9,13,14];
@@ -175,7 +183,7 @@ export class CalendarController {
       calendar:{
         height: 510,
         defaultView: 'month',
-        firstDay: 1,
+        // firstDay: 1,
         editable: true,
         eventConstraint: 'businessHours',
         businessHours: {
@@ -183,7 +191,7 @@ export class CalendarController {
           end: "20:00", // an end time (8pm)
           dow: [ 1, 2, 3, 4, 5, 6 ] // days of week. an array of zero-based day of week integers (0=Sunday)
         },
-        hiddenDays: [ 0 ], // hide Sundays
+        // hiddenDays: [ 0 ], // hide Sundays
         minTime: "10:00:00",
         maxTime: "20:00:00",
         slotEventOverlap: false,

@@ -1,16 +1,23 @@
 md-toolbar#footer.md-hue-2(flex="100")
 	.md-toolbar-tools(layout="row")
-		p © 2016 Amygdala LLC
-		span(flex)
-
-		md-button(ng-click="ft.openBottomSheet($event)" aria-label="asd" hide-gt-xs)
-			md-icon(md-svg-src="assets/icons/more_vert.svg")
-
 		//- Social buttons
+		md-button(ng-click="ft.openBottomSheet($event)" 
+							aria-label="Open bottom sheet" 
+							hide-gt-xs)
+			md-icon(md-svg-src="assets/icons/more_vert.svg")
 		span(ng-controller="GridBottomSheetController as bs" 
 				 hide 
 				 show-gt-xs
 				 layout="row"
 				 layout-align="center center")
-			md-button(ng-repeat="item in bs.items | limitTo:3" ng-href="{{::item.href}}" aria-label="{{::item.name}}")
+			span(style="font-size:14px") Visit us in:&nbsp;
+			md-button(ng-repeat="item in bs.items | limitTo:3" 
+								ng-href="{{::item.href}}" 
+								aria-label="{{::item.name}}")
 				md-icon(md-svg-src="assets/icons/{{::item.icon}}.svg")
+
+		span(flex) 
+		p.last-updated Last updated: Feb 24, 2016
+		span(flex) 
+
+		p © 2016 Amygdala LLC
