@@ -92,6 +92,17 @@ export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvi
 				$title: function() { return 'Photo gallery'; }
 			}
 		})
+		.state('articles', {
+			// url: '/article/{id:[0-9]{1,4}}',
+			url: '/articles',
+			templateUrl: 'app/articles/articles.html',
+			controller: 'ArticlesController',
+			controllerAs: 'arts',
+			resolve: {
+				// Constant title
+				$title: function() { return 'Articles'; }
+			}
+		})
 		.state('article', {
 			// url: '/article/{id:[0-9]{1,4}}',
 			url: '/article/{id}',

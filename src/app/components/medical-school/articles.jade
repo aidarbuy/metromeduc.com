@@ -12,14 +12,14 @@ md-card#medical-school.md-whiteframe-4dp
       md-card-title-text
         span.md-headline(ng-bind="::article.header")
         span.md-subhead(ng-bind="::article.date")
-        //- br
-        p(ng-repeat="teaser in article.teaser | limitTo: 2" ng-bind-html="::teaser | unsafe")
+        span.md-subhead.article-teaser(ng-bind-html="::article.teaser | unsafe")
       md-card-title-media
         .md-media-lg.card-media.md-whiteframe-2dp
           img(ng-src="assets/images/articles/{{article.img.src}}-152x152.jpg")
     md-card-actions(layout="row" layout-align="end center")
       md-button(ui-sref="article({id:article.img.src})") Read more...
 
+  md-button(ui-sref="articles") All articles
 
   //- .md-card-header
     img.md-card-image(ng-src="assets/images/articles/{{ms.article.img.src}}" alt="{{ms.article.img.alt}}")

@@ -4,6 +4,7 @@ export class ArticlesController {
 
 		this.articleIndex = 0;
 		this.articlesQuantity = ArticlesFactory.length-2;
+		this.articles = ArticlesFactory.query();
 		this.article = ArticlesFactory[this.articleIndex];
 
 		this.prevArticle = function(){

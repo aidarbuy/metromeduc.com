@@ -1,4 +1,7 @@
 #footer {
+	margin-top: 35px;
+	min-height: 48px;
+	max-height: 48px;
 	.md-toolbar-tools {		
 		p {
 			color: #eee;
@@ -24,12 +27,42 @@
 
 		// Social buttons
 		span {
+			// background: red;
+			padding-top: 10px;
 			.md-button {
-				margin: 0;
+				// background: cyan;
+				// margin: 10px;
 				// margin-top: 10px;
 				// padding: 10px 0;
 				md-icon {}
 			}
 		}
 	}
+}
+
+
+
+md-bottom-sheet {
+
+  // transform: translate3d(0, $bottom-sheet-hidden-bottom-padding, 0);
+  // transition: $swift-ease-out;
+  // transition-property: transform;
+
+  &.ng-enter {
+    // opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  &.ng-enter-active {
+    // opacity: 1;
+    // display: block;
+    // transform: translate3d(0, $bottom-sheet-hidden-bottom-padding, 0) !important;
+    // transition: $swift-ease-in;
+    transition: ease-out;
+  }
+
+  &.ng-leave-active {
+    // transform: translate3d(0, 100%, 0) !important;
+    // transition: $swift-ease-in;
+  }
 }

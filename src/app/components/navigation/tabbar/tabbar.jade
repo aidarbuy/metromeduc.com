@@ -1,5 +1,8 @@
-md-toolbar#tabs-menu(hide show-md show-lg md-scroll-shrink)
+md-toolbar#tabs-menu(hide show-gt-sm md-scroll-shrink)
 	//- .md-toolbar-tools(layout="row" layout-align="center")
 		md-button(ng-repeat="b in tab.menu" area-label="{{::b.title}}" ui-sref="{{::b.state}}" ng-class="{'current-btn':tab.isSelected(b.path)}" ng-click="tab.setCurrent(b.path)") {{::b.title}}
 	md-tabs(md-selected="selectedIndex" md-center-tabs)
-		md-tab(ng-repeat="t in tab.menu" label="{{::t.title}}" ui-sref="{{::t.state}}")
+		md-tab(ng-repeat="t in tab.menu" 
+					 label="{{::t.title}}" 
+					 ui-sref="{{::t.state}}"
+					 md-on-select="tab.setCurrent(t.path)")

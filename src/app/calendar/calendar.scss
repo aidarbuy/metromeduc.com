@@ -1,3 +1,77 @@
+#calendar {
+  h1.md-display-1 {
+    // background: red;
+    margin-bottom: 0px;
+  }
+  .md-tab { 
+    text-transform: capitalize;
+    font-size: 110%;
+  }
+  md-toolbar.md-accent > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
+    // color: #f0f0f0;
+    // color: red;
+    // tabs .md-tab {
+      color: rgba(0,0,0,0.54);
+    // }
+  }
+  md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color: rgb(0,188,212);
+  }
+  .calendarRoshelle:before {
+    content: "Dr. Beckwith";
+    color: #fff;
+    // font-weight: 600;
+  }
+  .calendarRoshelle {
+    // margin: 10px;
+    // padding-left: 5px;
+    // padding-right: 5px;
+    background-color: rgb(0,188,212);
+    opacity: 1;
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .calendarDoc2:before {
+    content: "Dr. Micozzi";
+    color: #fff;
+    // font-weight: 600;
+  }
+  .calendarDoc2 {
+    // margin: 10px;
+    // padding-left: 5px;
+    // padding-right: 5px;
+    // background-color: rgb(0,188,212);
+    background-color: #56cce1;
+    opacity: 1;
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .calendarDoc3:before {
+    content: "Dr. Rader";
+    color: #fff;
+    // font-weight: 600;
+  }
+  .calendarDoc3 {
+    // margin: 10px;
+    // padding-left: 5px;
+    // padding-right: 5px;
+    background-color: #2ca6d9;
+    opacity: 1;
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+
+
 /* checkbox - each time slot */
 .time-slot               {  }
 

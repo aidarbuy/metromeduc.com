@@ -1,27 +1,28 @@
-#scheduling.md-padding(ng-cloak)
+#calendar.md-padding(ng-cloak)
 
-  h1.md-display-1.md-primary-txt.center-txt.md-padding Calendar
+  h1.md-display-1.md-primary-txt.center-txt Calendar
 
-  .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSources")
+  //- md-list
+    md-list-item.md-3-line(ng-repeat="day in eventSourcesDoc2" ng-if="$first > 0") {{day}}
+      //- div.md-list-item-text(layout="column")
+        h3 {{ day }}
+        //- h4 {{ day.className }}
+        //- p {{ day.notes }}
 
-  //- div.md-padding
-    //- fieldset.standard
-      legend 
-        | Using 
-        code ng-model
-    div(layout="column" layout-wrap layout-gt-sm="row")
-      div(flex-xs flex="50")
-      //- were doing one day with 1 time slot for simplicity
-      //- we'll use angular's ng-repeat in a bit to get the other days and times
-      .row.times
-        .center-txt(ng-repeat="day in days")
-          h2 {{day.name}}
+  md-tabs(md-dynamic-height md-border-bottom)
 
-          .time-slot(ng-repeat="slot in day.slots")
-            input(type="checkbox" id="{{day.name}}-{{$index}}" ng-model="slot.booked" ng-disabled="slot.booked")
-            label(for="{{day.name}}-{{$index}}") {{slot.time}}
-              span(ng-if="slot.booked") Booked
-              span(ng-if="!slot.booked") Available
+    md-tab(label="Dr.Beckwith")
+      md-content.md-padding
+        //- h1.md-display-1 Tab One
+        p
+        .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSources")
 
-      p.center-txt
-        md-button.md-warn.md-raised(href="" ng-click="sc.reset()") Reset
+    md-tab(label="Dr.Micozzi")
+      md-content.md-padding
+        p
+        .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSourcesDoc2")
+
+    md-tab(label="Dr.Rader")
+      md-content.md-padding
+        p
+        .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSourcesDoc3")

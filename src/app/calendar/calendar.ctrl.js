@@ -9,8 +9,6 @@ export class CalendarController {
     var m = date.getMonth();
     var y = date.getFullYear();
 
-    $scope.eventSources3 = [$scope.events3];
-
     $scope.changeTo = 'Hungarian';
  
     // event source that pulls from google.com
@@ -21,31 +19,89 @@ export class CalendarController {
     };
 
     // event source that contains custom events on the scope
-    $scope.events = [
-      {
-        id         : 'sat_off',
-        start      : '17:00',
-        end        : '20:00',
-        dow        : [6],
-        color      : '#ccc',
-        rendering  : 'background',
-        overlap    : false
-      },
-      {title: 'Patient A', start: new Date(y, m, d - 4, 11, 0), end: new Date(y, m, d - 4, 12, 0)},
-      {title: 'Patient B', start: new Date(y, m, d - 3, 14, 0), end: new Date(y, m, d - 3, 16, 30)},
-      {id: 999, title: 'Patient C', start: new Date(y, m, d - 2, 12, 0), allDay: false},
-      {id: 999, title: 'Patient D', start: new Date(y, m, d - 1, 17, 0), allDay: false},
-      {title: 'Patient E', start: new Date(y, m, d + 1, 15, 0),end: new Date(y, m, d + 1, 16, 0),allDay: false}
-    ];
+    // var offHours = [];
+    let offHours = [{
+      id         : 'sat_off',
+      start      : '17:00',
+      end        : '20:00',
+      dow        : [6],
+      color      : '#ccc',
+      rendering  : 'background',
+      overlap    : false
+    }];
+
+    // {title: 'Patient B', start: new Date(y, m, d - 3, 14, 0), end: new Date(y, m, d - 3, 16, 30)},
+    // {id: 999, title: 'Patient C', start: new Date(y, m, d - 2, 12, 0), allDay: false},
+    // {id: 999, title: 'Patient D', start: new Date(y, m, d - 1, 17, 0), allDay: false},
+    // {title: 'Patient E', start: new Date(y, m, d + 1, 15, 0),end: new Date(y, m, d + 1, 16, 0),allDay: false}
+    
+    $scope.events = [];
+    $scope.doctor2Events = [];
+    $scope.doctor3Events = [];
+
+
+    // Adding doctors to events
+
+    // Doctor 1
+    var eventObject;
+    var roshelle = [-18,-17,-16,-14,-12,-9,-8,-6,-5,-4,-1,0,1,3,5,6,8,9,11,12,14,15,17,18,19];
+    for (var i = roshelle.length - 1; i >= 0; i--) {
+      eventObject = {
+        title: 'Doctor 1', 
+        start: new Date(y, m, d + roshelle[i]), 
+        allDay: true, 
+        rendering: 'background',
+        className: ['calendarRoshelle']
+      };
+      $scope.events.push(eventObject);
+    }
+
+    // Doctor 2
+    var doc2 = [-19,-17,-15,-11,-10,-8,-6,-5,-4,-1,0,1,3,5,6,8,9,13,14];
+    var eventObject2;
+    for (i = doc2.length - 1; i >= 0; i--) {
+      eventObject2 = {
+        title: 'Doctor 2', 
+        start: new Date(y, m, d + (doc2[i]+1)), 
+        allDay: true, 
+        rendering: 'background',
+        className: ['calendarDoc2']
+      };
+      $scope.doctor2Events.push(eventObject2);
+    }
+
+    // Doctor 3
+    var doc3 = [-19,-16,-14,-11,-9,-8,-6,-5,-3,-1,0,1,4,5,7,9,11,12,14];
+    var eventObject3;
+    for (i = doc3.length - 1; i >= 0; i--) {
+      eventObject3 = {
+        title: 'Doctor 3', 
+        start: new Date(y, m, d + (doc2[i]+1)), 
+        allDay: true, 
+        rendering: 'background',
+        className: ['calendarDoc3']
+      };
+      $scope.doctor3Events.push(eventObject3);
+    }
+
+
+    // log Doctor 2 events
+    // for (var i = 0; i <= $scope.doctor2Events.length - 1; i++) {
+    //   $log.log($scope.doctor2Events[i].title);
+    // }
+    // $log.log($scope.eventsDoc2);
+
+
 
     // event source that calls a function on every view switch
     $scope.eventsF = function (start, end, timezone, callback) {
       var s = new Date(start).getTime() / 1000;
-      // var e = new Date(end).getTime() / 1000;
+      var e = new Date(end).getTime() / 1000;
       var m = new Date(start).getMonth();
-      var events = [{title: 'Feed Me ' + m, start: s + (50000), end: s + (100000), allDay: false, className: ['customFeed']}];
+      var events = [{title: 'Feed Me ' + m, start: s + (50000), end: e + (100000), allDay: false, className: ['customFeed']}];
       callback(events);
     };
+
 
     $scope.calEventsExt = {
       color: '#f00',
@@ -106,16 +162,19 @@ export class CalendarController {
     };
      /* Render Tooltip */
     $scope.eventRender = function(event, element) {
-        element.attr({'tooltip': event.title,
-                     'tooltip-append-to-body': true});
-        $compile(element)($scope);
+      // if(event.rendering == 'background'){
+        // element.append("Dr. Beckwith");
+      // }
+      element.attr({'tooltip': event.title, 
+                    'tooltip-append-to-body': true});
+      $compile(element)($scope);
     };
 
     /* config object */
     $scope.uiConfig = {
       calendar:{
-        height: 590,
-        defaultView: 'agendaWeek',
+        height: 510,
+        defaultView: 'month',
         firstDay: 1,
         editable: true,
         eventConstraint: 'businessHours',
@@ -129,7 +188,7 @@ export class CalendarController {
         maxTime: "20:00:00",
         slotEventOverlap: false,
         slotDuration: '00:30:00',
-        eventColor: '#2cbfd9',
+        // eventColor: '#2cbfd9',
         // slotLabelInterval: '02:00:00',
         // selectable: true,
         customButtons: {
@@ -142,7 +201,7 @@ export class CalendarController {
           }
         },
         header: {
-          left: 'month agendaWeek agendaDay addEventButton',
+          left: 'month agendaWeek agendaDay',
           center: 'title',
           right: 'today prev,next'
         },
@@ -168,51 +227,32 @@ export class CalendarController {
       }
     };
 
+    // Event Source Options
+    // color: Sets every Event Object's color for this source.
+    // backgroundColor: Sets every Event Object's backgroundColor for this source.
+    // borderColor: Sets every Event Object's borderColor for this source.
+    // textColor: Sets every Event Object's textColor for this source.
+    // className: Sets every Event Object's className for this source.
+    // editable: Sets every Event Object's editable for this source.
+    // startEditable: Sets every Event Object's startEditable for this source.
+    // durationEditable: Sets every Event Object's durationEditable for this source.
+    // rendering: Sets every Event Object's rendering for this source.
+    // overlap: Sets every Event Object's overlap for this source.
+    // constraint: Sets every Event Object's constraint for this source.
+    // allDayDefault: Sets the allDayDefault option, but only for this source.
+    // eventDataTransform: Sets the eventDataTransform callback, but only for this source.
     /* event sources array*/
-    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
+    // $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
+    $scope.events.push(offHours[0]);
+    $scope.doctor2Events.push(offHours[0]);
+    $scope.doctor3Events.push(offHours[0]);
+
+    $scope.eventSources = [$scope.events, $scope.eventsF];
+    $scope.eventSourcesDoc2 = [$scope.doctor2Events];
+    $scope.eventSourcesDoc3 = [$scope.doctor3Events];
+ 
     $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
     /* EOF */
-
-
-    // $scope.eventSources = [
-      // your event source
-      // {
-      //   events: [ // put the array in the `events` property
-      //     {
-      //       title: 'Event 1',
-      //       start: '2016-02-18'
-      //     },
-      //     {
-      //       title: 'event2',
-      //       start: '2010-01-05',
-      //       end: '2010-01-07'
-      //     },
-      //     {
-      //       title: 'event3',
-      //       start: '2010-01-09T12:30:00'
-      //     }
-      //   ],
-      //   // Event Source Options
-        // color: Sets every Event Object's color for this source.
-        // backgroundColor: Sets every Event Object's backgroundColor for this source.
-        // borderColor: Sets every Event Object's borderColor for this source.
-        // textColor: Sets every Event Object's textColor for this source.
-        // className: Sets every Event Object's className for this source.
-        // editable: Sets every Event Object's editable for this source.
-        // startEditable: Sets every Event Object's startEditable for this source.
-        // durationEditable: Sets every Event Object's durationEditable for this source.
-        // rendering: Sets every Event Object's rendering for this source.
-        // overlap: Sets every Event Object's overlap for this source.
-        // constraint: Sets every Event Object's constraint for this source.
-        // allDayDefault: Sets the allDayDefault option, but only for this source.
-        // eventDataTransform: Sets the eventDataTransform callback, but only for this source.
-      //   color: 'green',
-      //   textColor: 'yellow'
-      // }
-
-      // any other event sources...
-    // ];
-
 
     // connect to firebase
     var ref = new Firebase("https://metromeduc.firebaseio.com");
@@ -222,39 +262,5 @@ export class CalendarController {
 
     // three way data binding
     syncObject.$bindTo($scope, 'days');
-
-    // function to set the default data
-    this.reset = function() {
-      // $log.log(ref);
-      // $log.log(obj);
-      ref.set({
-        monday: {
-          name: 'Monday',
-          slots: {
-            '0900': {
-              time: '9:00am',
-              booked: false
-            },
-            '0110': {
-              time: '11:00am',
-              booked: false
-            }
-          }
-        },
-        tuesday: {
-          name: 'Tuesday',
-          slots: {
-            '0900': {
-              time: '9:00am',
-              booked: false
-            },
-            '0110': {
-              time: '11:00am',
-              booked: false
-            }
-          }
-        }
-      })
-    }
   }
 }

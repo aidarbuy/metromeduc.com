@@ -24,7 +24,7 @@
 				width: 100%;
 				position: absolute;
 				bottom: 0px;
-				height: 70px;
+				height: 0px;
 				margin: 0;
 				padding: 0;
 			}
@@ -47,6 +47,7 @@
 
 		md-card-content {
 			p {
+				color: #444;
 				font-size: large;
 				text-align: left;
 			}

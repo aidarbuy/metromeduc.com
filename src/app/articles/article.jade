@@ -27,8 +27,11 @@ update-meta(property="og:image:url" content="https://metromeduc.com/assets/image
 
 
 
-md-content(layout-padding)
+md-content#article(layout-padding)
 	md-card
+		div(layout="row")
+			md-button.md-primary(ui-sref="articles") All Articles
+			span(flex)
 		md-card-title
 			md-card-title-text
 				span.md-display-1(ng-bind="::art.article.header")
@@ -138,3 +141,5 @@ md-content(layout-padding)
 					data-pin-config='beside'
 					style="margin-left:10px"
 				)
+
+metromed-footer

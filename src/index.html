@@ -21,6 +21,8 @@
     <meta property="og:image" content="https://metromeduc.com/assets/images/articles/prescriptions-600x300.jpg" />
     <meta property="og:image:url" content="https://metromeduc.com/assets/images/articles/prescriptions-600x300.jpg" />
 
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -46,103 +48,34 @@
     <link rel="stylesheet" href="nanogallery/css/themes/clean/nanogallery_clean.min.css" type="text/css">
     <link rel="stylesheet" href="nanogallery/css/themes/clean/nanogallery_clean.woff.min.css" type="text/css">
   </head>
-  <body>
+  <body layout="column">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <!--
+    <md-tabs md-no-ink-bar md-center-tabs hide show-gt-sm>
+      <md-tab label="Home" ui-sref="home"></md-tab>
+      <md-tab label="About Us" ui-sref="about"></md-tab>
+      <md-tab label="Services" ui-sref="services"></md-tab>
+      <md-tab label="Doctors" ui-sref="doctors"></md-tab>
+      <md-tab label="Primary Care" ui-sref="primary"></md-tab>
+      <md-tab label="Map" ui-sref="map"></md-tab>
+      <md-tab label="Virtual Tour" ui-sref="virtual"></md-tab>
+      <md-tab label="" ui-sref="virtual"></md-tab>
+    </md-tabs>
+    -->
 
-
-
-
-    <section layout="row" flex>
-      <!--
-      <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-        <md-toolbar class="md-theme-indigo">
-          <h1 class="md-toolbar-tools">Sidenav Left</h1>
-        </md-toolbar>
-        <md-content layout-padding ng-controlle="LeftCtrl">
-          <md-button ng-click="close()" class="md-primary" hide-gt-md>Close Sidenav Left</md-button>
-          <p hide-md show-gt-md>
-            This sidenav is locked open on your device. To go back to the default behavior,
-            narrow your display.
-          </p>
-        </md-content>
-      </md-sidenav>
-      -->
+    <div layout="row" flex>
       <sidenav></sidenav>
-      <!-- <md-content flex layout-padding> -->
-
-      <!-- </md-content> -->
-
-
-
-
-    <div layout="column" layout-fill="">
-      
-      <!-- The outer wrapper - need to set height to px or vh -->
-      <!-- <div style="height:100vh; border:1px solid black; overflow:hidden"> -->
-      <!-- Alternatively, the outer wrapper can be positioned absolutely, with an 'auto' height: -->
-      <div style="position: absolute; top: 0px; bottom:0px; height:auto; width: 100%; border:1px solid black; overflow:hidden">
-     
-
-      <!-- Toolbar -->
-      <md-toolbar class="md-medium-tall md-whiteframe-4dp" md-scroll-shrink="">
-        <toolbar></toolbar>
-
-        <!-- 
-        <div class="md-toolbar-tools">
-          <h3>
-            <span>My App Title</span>
-          </h3>
-        </div>
-        -->
-
-          <md-tabs md-no-ink-bar md-center-tabs hide show-md show-gt-md>
-            <md-tab label="Home" ui-sref="home"></md-tab>
-            <md-tab label="About Us" ui-sref="about"></md-tab>
-            <md-tab label="Services" ui-sref="services"></md-tab>
-            <md-tab label="Doctors" ui-sref="doctors"></md-tab>
-            <md-tab label="Primary Care" ui-sref="primary"></md-tab>
-            <md-tab label="Map" ui-sref="map"></md-tab>
-            <md-tab label="Virtual Tour" ui-sref="virtual"></md-tab>
-            <md-tab label="" ui-sref="virtual"></md-tab>
-          </md-tabs>
-
-          <div id="toolbar" hide-gt-md>
-            <div class="md-toolbar-tools" layout="row" layout-align="end end" style="height:40px; min-height:40px">
-              <!-- Address -->
-              <a ui-sref="map" layout="row" hide-xs>
-                <md-icon md-svg-src="assets/icons/ic_place_24px.svg"></md-icon>
-                <span>952 Edwards Ferry Road NE Leesburg VA</span>
-                <!-- span(hide) &nbsp;20176 -->
-              </a>
-              <span style="margin-left:7px; margin-right:7px"></span>
-              <!-- Email -->
-              <a href="mailto:info@metromeduc.com" layout="row" show-xs hide show-gt-md>
-                <md-icon md-svg-src="assets/icons/ic_email_24px.svg"></md-icon>
-                <span>info@metromeduc.com</span>
-              </a>
-            </div>
-          </div>
-
-        <!-- <tabbar></tabbar> -->
-      </md-toolbar>
-
-
-      <!-- Content height does not need to be px any more: -->
-      <md-content style="height:100%">
-        <div class="fade" ui-view></div>
-        <!-- <div ui-calendar ng-model="eventSources"></div> -->
-        <metromed-footer></metromed-footer>
-      </md-content>
+      <div layout="column" flex id="content">
+        <md-content layout="column" flex>
+          <toolbar></toolbar>
+          <tabbar></tabbar>
+          <div class="fade" ui-view></div>
+        </md-content>
       </div>
     </div>
-
-
-    </section>
-
-
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

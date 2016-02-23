@@ -2,9 +2,11 @@
 	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
+
 	.md-card-header {
 		position: relative;
 		overflow: hidden;
+
 		img {
 		}
 
@@ -15,7 +17,7 @@
 			opacity: .9;
 			// position: relative;
 			position: absolute;
-			bottom: 6px;
+			bottom: 0px;
 			margin: 0;
 			padding: 0;
 			padding: 10px 20px;

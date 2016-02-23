@@ -1,14 +1,58 @@
-div(flex ng-cloak)
-  md-grid-list(
-    md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6"
-    md-row-height-gt-md="1:1" md-row-height="4:3"
-    md-gutter="8px" md-gutter-gt-sm="4px"
-  )
-    md-grid-tile(ng-repeat="tile in vm.tiles" 
-      md-rowspan="{{tile.span.row}}"
-      md-colspan="{{tile.span.col}}"
-      md-colspan-sm="1"
-      ng-class="tile.background")
-        md-icon(md-svg-icon="{{tile.icon}}")
+#articles.md-padding
+
+  h1.md-display-1.md-primary-txt.center-txt Articles
+
+  md-content#articles.md-padding(layout-xs="column" 
+                        layout="row" 
+                        layout-wrap)
+    div(flex="100"
+        flex-gt-sm="50" 
+        layout="column" 
+        ng-repeat="art in arts.articles")
+
+      md-card.md-whiteframe-2dp.stick-to-screen
+        md-card-title
+          md-card-title-text
+            span.md-headline(ng-bind="::art.header")
+            span.md-subhead(ng-bind="::art.date")
+            span.md-subhead.article-teaser(ng-bind-html="::art.teaser | unsafe")
+
+          md-card-title-media
+            div.md-media-lg.card-media
+              img(ng-src="assets/images/articles/{{art.img.src}}-152x152.jpg")
+        //- md-card-content
+          p(ng-repeat="t in art.teaser" ng-bind-html="::t | unsafe")
+
+        md-card-actions(layout="row" layout-align="end center")
+          md-button(ui-sref="article({id:art.img.src})") Read article
+          //- md-button Share
+
+metromed-footer
+//- md-content(layout-padding)
+  div(flex ng-cloak)
+    md-grid-list(md-cols="2" md-gutter="1em" md-row-height="1:1")
+      md-grid-tile(ng-repeat="art in arts.articles"
+                   md-colspan="1" 
+                   md-rowspan="1")
+        md-grid-tile-header
+          h3 {{art.header}}
+        //- md-grid-tile-content
+        img(ng-src="assets/images/articles/{{art.img.src}}-152x152.jpg"
+              width="221"
+              height="221")
+          //- md-card(flex="100")
+            md-card-title
+              md-card-title-text
+                span.md-headline 
+                span.md-subhead {{art.date}}
+            md-card-content(layout="row" layout-align="space-between")
+              div.md-media-xl.card-media
+                md-card-actions(layout="column")
+                  md-button.md-icon-button(aria-label="Favorite")
+                    md-icon(md-svg-icon="assets/icons/favorite.svg")
+                  md-button.md-icon-button(aria-label="Settings")
+                    md-icon(md-svg-icon="assets/icons/menu.svg")
+                  md-button.md-icon-button(aria-label="Share")
+                    md-icon(md-svg-icon="assets/icons/share-arrow.svg")
         md-grid-tile-footer
-          h3 {{tile.title}}
+          h3 This is a footer

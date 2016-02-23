@@ -1,5 +1,4 @@
-//- md-toolbar#toolbar.md-whiteframe-z2(layout="row" md-scroll-shrin)
-#toolbar
+md-toolbar#toolbar.md-whiteframe-2dp
 	.md-toolbar-tools.md-whiteframe-4d(layout="row" layout-align="center center")
 
 		//- Menu button
@@ -7,7 +6,7 @@
 			md-icon(md-svg-src="assets/icons/menu.svg" aria-label="Menu")
 
 		//- Brand
-		a(ui-sref="home" layout="row" layout-align="start center" hide-gt-l)
+		a(ui-sref="home" layout="row" layout-align="start center" ng-click="tab.setCurrent(0)")
 			md-icon(md-svg-src="assets/icons/logo.svg")
 			h1(hide show-gt-sm) MetroMed Urgent Care
 			h1(hide-gt-sm) MetroMed UC

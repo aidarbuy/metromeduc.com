@@ -1,0 +1,105 @@
+
+ <header md-page-header>
+    <div md-header-picture style="background-image:url(http://www.shortday.in/wp-content/uploads/2015/06/Katy-Perry-wallpaper.jpg)"></div>
+    <md-toolbar scroll>
+      <div class="md-toolbar-tools">
+        <md-button class="md-tools" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+        <h2 md-header-title flex>Katy Perry</h2>
+        <md-button class="md-tools" aria-label="Edit Contact"><i class="ion-android-create"></i></md-button>
+        <md-button class="md-tools" aria-label="More"><i class="ion-android-more-vertical"></i></md-button>
+      </div>
+    </md-toolbar>
+   <div class="main-fab"><md-button aria-label="Float Action Button" class="md-fab md-accent"><i class="ion-android-star"></i></md-button></div>
+ </header> 
+<br /><br />
+<section id="page-section">
+  <md-content>
+    <md-list>
+      <md-item>
+        <md-item-content>
+          <div class="md-tile-left">
+            <i class="ion-android-call"></i>
+          </div>
+          <div class="md-tile-content">
+            <i class="ion-android-hangout" style="float:right;margin-right:18px;margin-top:8px;color:#aaa;"></i>
+            <h3 style="padding-top:8px;">(950)555-1234</h3>
+            <p class="muted">
+              Mobile
+            </p>
+          </div>
+        </md-item-content>
+      </md-item>
+      <md-item>
+        <md-item-content>
+          <div class="md-tile-left">
+              
+          </div>
+          <div class="md-tile-content">
+            <i class="ion-android-hangout" style="float:right;margin-right:18px;color:#aaa;"></i>
+            <h3>(333)254-7851</h3>
+            <p class="muted">
+              Work
+            </p>
+          </div>
+        </md-item-content>
+      </md-item>
+      
+      <md-divider></md-divider>
+      <md-item>
+        <md-item-content>
+          <div class="md-tile-left">
+            <i class="ion-android-mail"></i>
+          </div>
+          <div class="md-tile-content" >
+            <h3 style="padding-top:8px;">katyperryisme@mail.com</h3>
+            <p class="muted">
+              Personal
+            </p>
+          </div>
+        </md-item-content>
+      </md-item>
+      <md-item>
+        <md-item-content>
+          <div class="md-tile-left">
+              
+          </div>
+          <div class="md-tile-content">
+            <h3>katykate@mail.com</h3>
+            <p class="muted">
+              Work
+            </p>
+          </div>
+        </md-item-content>
+      </md-item>
+      <md-divider></md-divider>
+      
+      <md-item>
+        <md-item-content>
+          <div class="md-tile-left">
+            <i class="ion-android-pin"></i>
+          </div>
+          <div class="md-tile-content" >
+            <h3 style="padding-top:8px;">2000 SW 1st Ave</h3>
+            <h3>San Fransisco, CA 94112</h3>
+            <p class="muted">Home</p>
+          </div>
+        </md-item-content>
+      </md-item>
+      <md-item>
+        <md-item-content>
+          <div class="md-tile-left">
+              
+          </div>
+          <div class="md-tile-content">
+            <h3>1600 Amphitheatre Pkwy</h3>
+            <h3>Mountain View, CA 94043</h3>
+            <p class="muted">Work</p>
+          </div>
+        </md-item-content>
+      </md-item>
+      <md-divider></md-divider>
+      
+      
+    </md-list>
+  </md-content>
+</section>

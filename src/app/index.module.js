@@ -16,6 +16,9 @@ import Navigation from '../app/components/navigation/navigation';
 // Filters
 import { UnsafeFilter } from '../app/components/filters/unsafe.fltr';
 
+// Directives
+// import { ScrollDirective } from '../app/components/directives/scroll.drct';
+
 // Navigation
 import { ToolbarDirective } from '../app/components/navigation/toolbar/toolbar.drct';
 import { TabbarDirective } from '../app/components/navigation/tabbar/tabbar.drct';
@@ -56,9 +59,9 @@ import { VirtualTourController } from './virtual/tour.ctrl';
 import { PhotogalleryController } from './gallery/gallery.ctrl';
 
 // Articles
+import { ArticlesFactory } from './articles/articles.fctr';
 import { ArticlesController } from './articles/articles.ctrl';
 import { ArticleController } from './articles/article.ctrl';
-import { ArticlesFactory } from './articles/articles.fctr';
 
 // Scheduling
 import { CalendarController } from './calendar/calendar.ctrl';
@@ -94,6 +97,9 @@ angular.module('metromed', [
   
   // Filters
   .filter('unsafe', UnsafeFilter)
+
+  // Directives
+  // .directive('scroll', ScrollDirective)
 
   // Navigation
   .directive('toolbar', ToolbarDirective)
@@ -136,9 +142,9 @@ angular.module('metromed', [
   .controller('PhotogalleryController', PhotogalleryController)
 
   // Articles
+  .factory('ArticlesFactory', ArticlesFactory)
   .controller('ArticlesController', ArticlesController)
   .controller('ArticleController', ArticleController)
-  .factory('ArticlesFactory', ArticlesFactory)
 
   // Calendar
   .controller('CalendarController', CalendarController)
