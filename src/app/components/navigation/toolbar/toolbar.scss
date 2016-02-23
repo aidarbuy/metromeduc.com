@@ -1,16 +1,17 @@
 #toolbar {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	padding-right: 10px;
 	padding-left: 10px;
-	left:0;
-	top:0;
-	z-index: 1999999998;
+	left: 0;
+	top: 0;
+	// z-index: 1999999998;
 	color: white;
 	min-height:48px;
+
 	.md-toolbar-tools {
 		height: 48px;
-		font-size: large;
+		// font-size: large;
 
 		.md-button {
 			md-icon {fill: white;}
@@ -36,19 +37,33 @@
 			};
 		}
 
-		a:nth-child(5) { md-icon { margin-left: 15px; } }
-
-		a:nth-child(7) { md-icon { margin-left: 15px; } }
+		a.toolbar-address { 
+			// background: green;
+			md-icon { margin-left: 15px; }
+		}
+		a:nth-child(6) { md-icon { margin-left: 15px; } }
+		a:nth-child(7) { md-icon { margin-left: 25px; } }
 
 		a.toolbar-phone {
 			// background: red;
 			// md-icon {color: rgb(197,17,98)}
 			// color: rgb(197,17,98)
-			font-weight: bold;
+			// font-weight: bold;
 
 			md-icon.margin-left {
 					// background: red;
-					margin-left:10px;
+					margin-left:25px;
+				}
+		}
+		a.toolbar-email {
+			// background: red;
+			// md-icon {color: rgb(197,17,98)}
+			// color: rgb(197,17,98)
+			// font-weight: bold;
+
+			md-icon.margin-left {
+					// background: red;
+					margin-left:25px;
 				}
 		}
 
