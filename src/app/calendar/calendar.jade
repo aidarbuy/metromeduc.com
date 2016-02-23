@@ -1,28 +1,30 @@
 #calendar.md-padding(ng-cloak)
 
-  h1.md-display-1.md-primary-txt.center-txt Calendar
+	h1.md-display-1.md-primary-txt.center-txt Calendar: Dr. Roshelle Beckwith
+	br
 
-  //- md-list
-    md-list-item.md-3-line(ng-repeat="day in eventSourcesDoc2" ng-if="$first > 0") {{day}}
-      //- div.md-list-item-text(layout="column")
-        h3 {{ day }}
-        //- h4 {{ day.className }}
-        //- p {{ day.notes }}
+	.span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSources")
+	//- md-list
+		md-list-item.md-3-line(ng-repeat="day in eventSourcesDoc2" ng-if="$first > 0") {{day}}
+			//- div.md-list-item-text(layout="column")
+				h3 {{ day }}
+				//- h4 {{ day.className }}
+				//- p {{ day.notes }}
 
-  md-tabs(md-dynamic-height md-border-bottom)
+	//- md-tabs(md-dynamic-height md-border-bottom)
 
-    md-tab(label="Dr.Beckwith")
-      md-content.md-padding
-        //- h1.md-display-1 Tab One
-        p
-        .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSources")
+	//- md-tab(label="Dr.Beckwith")
+		md-content.md-padding
+			//- h1.md-display-1 Tab One
+			p
+			.span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSources")
 
-    md-tab(label="Dr.Micozzi")
-      md-content.md-padding
-        p
-        .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSourcesDoc2")
+	//- md-tab(label="Dr.Micozzi")
+		md-content.md-padding
+			p
+			.span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSourcesDoc2")
 
-    md-tab(label="Dr.Rader")
-      md-content.md-padding
-        p
-        .span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSourcesDoc3")
+	//- md-tab(label="Dr.Rader")
+		md-content.md-padding
+			p
+			.span8.calendar(ui-calendar="uiConfig.calendar" ng-model="eventSourcesDoc3")
