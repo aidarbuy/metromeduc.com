@@ -131,8 +131,13 @@ md-content.md-default-theme {
 
 .center-txt{text-align: center}
 
+
+// Text color
 .md-primary-txt {
 	color: $md-primary;
+}
+.md-primary-txt-hue2 {
+	color: $md-hue-2 !important;
 }
 .md-accent-txt {
 	color: $md-accent;
@@ -141,6 +146,7 @@ md-content.md-default-theme {
 	// color: $md-warn;
 	font-size: 110%;
 }
+
 
 md-toolbar.md-accent > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
 	color: rgb(240,240,240);

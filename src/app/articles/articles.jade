@@ -5,16 +5,25 @@
   md-content#articles.md-padding(layout-xs="column" 
                         layout="row" 
                         layout-wrap)
-    div(flex="100"
-        flex-gt-sm="50" 
+    //-  
+      xs :    0...600
+      sm :  600...960
+      md :  960..1280
+      lg : 1280..1920
+      xl : 1920......
+    div(flex-xs="100" 
+        flex-sm="100" 
+        flex-md="50" 
+        flex-lg="33" 
+        flex-xl="25" 
         layout="column" 
         ng-repeat="art in arts.articles")
 
       md-card.md-whiteframe-2dp.stick-to-screen
         md-card-title
           md-card-title-text
-            span.md-headline(ng-bind="::art.header")
-            span.md-subhead(ng-bind="::art.date")
+            span.md-headline.md-primary-txt(ng-bind="::art.header")
+            span.md-subhead.md-primary-txt-hue2(ng-bind="::art.date")
             span.md-subhead.article-teaser(ng-bind-html="::art.teaser | unsafe")
 
           md-card-title-media
@@ -24,7 +33,7 @@
           p(ng-repeat="t in art.teaser" ng-bind-html="::t | unsafe")
 
         md-card-actions(layout="row" layout-align="end center")
-          md-button(ui-sref="article({id:art.img.src})") Read article
+          md-button.md-primary(ui-sref="article({id:art.img.src})") Read article
           //- md-button Share
 
 metromed-footer
