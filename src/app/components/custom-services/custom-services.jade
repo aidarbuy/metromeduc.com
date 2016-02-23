@@ -1,8 +1,14 @@
 #custom-services(layout="row" layout-wrap)
-	div(ng-repeat="i in cs.data" flex="100" flex-gt-xs="50" flex-gt-sm="50" flex-gt-md="25")
-		md-card.md-whiteframe-z2.stick-to-screen
+
+	div(ng-repeat="i in cs.data" 
+			flex="100" 
+			flex-gt-xs="50" 
+			flex-gt-sm="50" 
+			flex-gt-md="25")
+
+		md-card.md-whiteframe-z2.stick-to-screen(ui-sref="{{::i.href}}")
 			md-card-content
-				a(ng-href="{{::i.href}}" layout="column" layout-align="start center")
-					md-icon(md-svg-src="assets/icons/custom-services/{{::i.icon}}.svg" size="64" style="fill:#2cbfd9")
-					h2.md-title(ng-bind="::i.title")
-				p(ng-repeat="t in i.text" ng-bind="::t")
+					div(layout="column" layout-align="start center")
+						md-icon(md-svg-src="assets/icons/custom-services/{{::i.icon}}.svg" size="64" style="fill:#2cbfd9")
+						h2.md-title(ng-bind="::i.title")
+					p(ng-repeat="t in i.text" ng-bind="::t")
