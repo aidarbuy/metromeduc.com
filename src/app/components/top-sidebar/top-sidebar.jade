@@ -5,6 +5,4 @@
 		//- md-card(flex ng-style="{'background-color':(i.bgColor)};")
 		md-card-content
 
-			h2.md-title(ng-bind-html="::i.header | unsafe")
-
-			div(ng-bind-html="::i.text | unsafe")
+			ng-include(src="'../app/components/top-sidebar/' + $index + '.html'")

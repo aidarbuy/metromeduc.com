@@ -57,7 +57,7 @@ export class CalendarController {
           className: ['calendarRoshelle']
         };
 
-        if (eventObject.start.getDay() != 0) {
+        if (eventObject.start.getDay() > 1) {
           $scope.events.push(eventObject);
         }
       }
@@ -189,7 +189,7 @@ export class CalendarController {
         businessHours: {
           start: "10:00", // a start time (10am)
           end: "20:00", // an end time (8pm)
-          dow: [ 1, 2, 3, 4, 5, 6 ] // days of week. an array of zero-based day of week integers (0=Sunday)
+          dow: [ 2, 3, 4, 5, 6 ] // days of week. an array of zero-based day of week integers (0=Sunday)
         },
         // hiddenDays: [ 0 ], // hide Sundays
         minTime: "10:00:00",

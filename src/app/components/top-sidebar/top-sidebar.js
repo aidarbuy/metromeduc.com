@@ -14,7 +14,8 @@ var topSidebars = [
 	{
 		header: 'New 2016 Hours of Operation:',
 		// text: '<p><ul><li style="padding-bottom:5px">Monday-Friday: 10 am to 8 pm</li><md-divider><li style="padding-top:5px;padding-bottom:5px">Saturday: 10 am to 5 pm</li><md-divider><li style="padding-top:5px;padding-bottom:5px">Sunday: Closed</li><md-divider><li style="padding-top:5px;padding-bottom:5px">Major Holidays Observed</li><md-divider><li style="padding-top:5px">No Appointments Necessary</li></ul></p>',
-		text: '<p><ul><li style="padding-bottom:5px">Monday-Friday: 10 am to 8 pm</li><md-divider><li style="padding-top:5px;padding-bottom:5px">Saturday: 10 am to 5 pm</li><md-divider><li style="padding-top:5px">Sunday: Closed</li></ul></p>',
+		// text: '<p><ul><li style="padding-bottom:5px">Monday-Friday: 10 am to 8 pm</li><md-divider><li style="padding-top:5px;padding-bottom:5px">Saturday: 10 am to 5 pm</li><md-divider><li style="padding-top:5px">Sunday: Closed</li></ul></p>',
+		text: '<p layout="row"><span>Tuesday-Friday:</span><span flex></span><span>10 am to 8 pm</span></p><md-divider><p layout="row"><span>Saturday:</span><span flex></span><span>10 am to 5 pm</span></p><md-divider><p layout="row"><span>Sunday:</span><span flex></span><span>Closed</span></p>',
 		// text: '<p><ul><li>Monday-Friday: 10 am to 8 pm</li><md-divider><li>Saturday: 10 am to 5 pm</li><md-divider><li>Sunday: Closed</li></ul></p>',
 		// bgColor: '#2ca6d9',
 		// bgColor: '#1b90da',
@@ -58,4 +59,3 @@ var topSidebars = [
 ];
 
 export default topSidebars;
-// <p>You only need to go to the emergency department to be admitted for extended care or surgery.</p>
