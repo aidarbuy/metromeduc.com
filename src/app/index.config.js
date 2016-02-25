@@ -1,4 +1,7 @@
-export function config ($logProvider, $mdThemingProvider, uiGmapGoogleMapApiProvider, usSpinnerConfigProvider) {
+export function config($logProvider, 
+                       $mdThemingProvider, 
+                       uiGmapGoogleMapApiProvider, 
+                       usSpinnerConfigProvider) {
   'ngInject';
 
   // Enable log
@@ -33,4 +36,17 @@ export function config ($logProvider, $mdThemingProvider, uiGmapGoogleMapApiProv
   usSpinnerConfigProvider.setDefaults({color: 'blue'});
   usSpinnerConfigProvider.setTheme('bigBlue', {color: 'blue', radius: 20});
   usSpinnerConfigProvider.setTheme('smallRed', {color: 'red', radius: 6});
+
+  // angular.module('plunker', ['ui.bootstrap'])
+  //   .config(['$provide', Decorate]);
+
+  //   function Decorate($provide) {
+  //     $provide.decorator('alertDirective', function($delegate) {
+  //       var directive = $delegate[0];
+
+  //       directive.templateUrl = "alertOverride.tpl.html";
+
+  //       return $delegate;
+  //     });
+  //   }
 }

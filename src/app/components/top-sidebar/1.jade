@@ -1,20 +1,30 @@
-h2.md-title 2016 Hours of Operation:
+#hours-of-operation
 
-p(layout="row")
-	span Tuesday-Friday:
-	span(flex)
-	span 10 am to 8 pm
+	h2.md-title.center-txt Hours of Operation:
 
-md-divider
-
-p(layout="row")
-	span Saturday:
-	span(flex)
-	span 10 am to 5 pm
-
-md-divider
-
-p(layout="row")
-	span Sunday:
-	span(flex)
-	span Closed
+	table(border="0" style="width:100%")
+		tr
+			td.cell-left 	 Monday
+			td.cell-center :
+			td.cell-right  closed
+		tr
+			td(colspan="3")
+				md-divider
+		tr
+			td.cell-left 	 Tuesday &ndash; Friday
+			td.cell-center :
+			td.cell-right  10 am to 8 pm
+		tr
+			td(colspan="3")
+				md-divider
+		tr
+			td.cell-left Saturday
+			td.cell-center :
+			td.cell-right 10 am to 5 pm
+		tr
+			td(colspan="3")
+				md-divider
+		tr
+			td.cell-left Sunday
+			td.cell-center :
+			td.cell-right closed

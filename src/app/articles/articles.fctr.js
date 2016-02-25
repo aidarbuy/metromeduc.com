@@ -4,8 +4,6 @@ import { articles } from './articles';
 export function ArticlesFactory() {
   'ngInject';
 
-  // $log.log(articles[0]);
-
   return {
     query: function() {
       return articles;

@@ -1,10 +1,30 @@
 #article {
 	md-card {
-			md-button {
-			}
+		md-button {
+		}
+
 		md-card-title {
 			md-card-title-text {
 				color: $md-primary;
+			}
+		}
+
+		md-card-actions {
+			a.facebookShare {
+				// margin-bottom: 1px;
+			}
+
+			a[twitter] {
+				margin-left: 10px; 
+				margin-right: 11px; 
+				margin-top: 9px;
+			}
+
+			.g-plus {
+			}
+
+			.linkedinShare {
+				margin-left: 10px;
 			}
 		}
 	}

@@ -1,69 +1,58 @@
 #top-sidebar {
 	padding: 8px;
 	padding-top: 0;
-
-	md-card {
+	.cell {
+		top: 0px;
+		background: green;
+		background: #box_color_1;
 		min-height: 250px;
+		margin: 0px;
+		padding: 0px;
+		padding-left: 10px;
+		padding-right: 10px;
 		opacity: 0.9;
-		-webkit-transition: opacity 0.3s ease-out 0s;
-		-moz-transition: opacity 0.3s ease-out 0s;
-		-o-transition: opacity 0.3s ease-out 0s;
-		-ms-transition: opacity 0.3s ease-out 0s;
-		transition: opacity 0.3s ease-out 0s;
-
-		// font-size: 100%;
-		// -webkit-transition: font-size 0.3s ease-out 0s;
-		// -moz-transition: font-size 0.3s ease-out 0s;
-		// -o-transition: font-size 0.3s ease-out 0s;
-		// -ms-transition: font-size 0.3s ease-out 0s;
-		// transition: font-size 0.3s ease-out 0s;
-
-		// color: #fefefe;
 		color: white;
-		margin: 0;
-		padding-left: 0px;
-		padding-right: 0px;
-
-		md-card-content {
-			font-size: 110%;
-			padding-top: 0;
-
-			h2 {
-				// -webkit-transition: font-size 0.3s ease-out 0s;
-				// -moz-transition: font-size 0.3s ease-out 0s;
-				// -o-transition: font-size 0.3s ease-out 0s;
-				// -ms-transition: font-size 0.3s ease-out 0s;
-				// transition: font-size 0.3s ease-out 0s;
-				.accent{
-					font-size: 140%;
-
-					font-weight: bold;
-					// color: $md-accent;
-					// color: #e91e63;
-					// color: #d81b60;
-					// color: $md-hue-2;
-				}
-			}
-
-			p {
-				// font-size: 110%;
-				a{color:white}
-			}
-
-			p.p-accent{
-				font-size: 120%;
-				// font-weight: bold;
-			}
-		}
-	}
-
-	md-card:first-child {
-		// background: #2cbfd9;
-	}
-
-	md-card:hover {
-		opacity: 1;
-		// font-size: 101%;
-		// h2 {font-size:136%}
-	}
-}
+		-webkit-transition: opacity 0.4s ease-out 0s;
+		-moz-transition: opacity 0.4s ease-out 0s;
+		-o-transition: opacity 0.4s ease-out 0s;
+		-ms-transition: opacity 0.4s ease-out 0s;
+		transition: opacity 0.4s ease-out 0s;
+		&:hover {
+			opacity: 1}
+		#contact-info {
+			backgroun: red}
+		#hours-of-operation {
+			width: 100%;
+			height: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+			.cell-left {
+				width: 45%;
+				text-align: right}
+			.cell-center {
+				width: 5%;
+				text-align: center;
+				color: #ddd}
+			.cell-right {
+				width: 45%}}
+		h2 {
+			margin: 0;
+			margin-bottom: 20px;
+			.accent {
+				font-size: 140%;
+				font-weight: bold}}
+		.md-title {}
+		p {
+			a {
+				color: white;
+				text-decoration: none}}
+		p.p-accent {
+			font-size: 120%}}
+	.cell-1 {
+		background: $box-color-1}
+	.cell-2 {
+		background: $box-color-2}
+	.cell-3 {
+		background: $box-color-3}
+	.cell-4 {
+		background: $box-color-4}}

@@ -3,30 +3,21 @@ style.
 		font-size: 100%;
 	}
 
-update-title(title="{{ art.article.header }} - MetroMed Urgent Care")
-update-meta(name="description" content="{{ art.article.teaser[0] }}")
-update-meta(name="keywords" content="urgent, care, urgent care, health, health care, leesburg, emergency and urgent care loudoun, health care clinics leesburg, medical, clinic, doctor, doctors, emergency, primary care, pediatric, health care clinics leesburg, health care, health care clinic, leesburg health clinic")
+update-title(title="{{ article.header }} - MetroMed Urgent Care")
+update-meta(name="description" content="{{ article.teaser }}")
+update-meta(name="keywords" content="{{ article.keywords }}")
 update-meta(name="author" content="MetroMed Urgent Care")
-
-update-meta(property="og:url" content="https://metromeduc.com/article/{{art.article.img.src}}")
+update-meta(property="og:url" content="https://metromeduc.com/article/{{article.img.src}}")
 update-meta(property="og:type" content="article")
-update-meta(property="og:title" content="{{ art.article.header }}")
-update-meta(property="og:description" content="{{ art.article.teaser[0] }}")
-update-meta(property="og:image" content="https://metromeduc.com/assets/images/articles/{{ art.article.img.src }}-600x300.jpg")
-update-meta(property="og:image:url" content="https://metromeduc.com/assets/images/articles/{{ art.article.img.src }}-600x300.jpg")
-
+update-meta(property="og:title" content="{{ article.header }}")
+update-meta(property="og:description" content="{{ article.teaser }}")
+update-meta(property="og:image" content="https://metromeduc.com/assets/images/articles/{{ article.img.src }}-600x300.jpg")
+update-meta(property="og:image:url" content="https://metromeduc.com/assets/images/articles/{{ article.img.src }}-600x300.jpg")
 //- update-meta(charset="ISO-8859-1")
 //- update-meta(http-equiv="Content-Language" content="es")
 
-//- md-card#article
-	md-card-content(style="padding:25px;padding-right:30px;")
-		h1.md-display-1(ng-bind="::art.article.header" style="margin-bottom:0")
-		h3.md-subhead(ng-bind="::art.article.date" style="margin-top:0")
-		img.md-image(ng-src="assets/images/articles/{{art.article.img.src}}-600x300.jpg")
-		p.md-body-2(ng-repeat="text in art.article.text" ng-bind-html="::text | unsafe")
 
-
-
+toolbar
 md-content#article(layout-padding)
 	md-card
 		div(layout="row")
@@ -34,15 +25,15 @@ md-content#article(layout-padding)
 			span(flex)
 		md-card-title
 			md-card-title-text
-				span.md-display-1(ng-bind="::art.article.header")
-				span.md-subtitle(ng-bind="::art.article.date")
+				span.md-display-1(ng-bind="::article.header")
+				span.md-subtitle(ng-bind="::article.date")
 
 		//- Image
-		img(ng-src="assets/images/articles/{{art.article.img.src}}-600x300.jpg" class="md-card-image" alt="Washed Out" width="600" height="300")
+		img(ng-src="assets/images/articles/{{article.img.src}}-600x300.jpg" class="md-card-image" alt="Washed Out" width="600" height="300")
 
 		//- Text
 		md-card-content
-			p(ng-repeat="text in art.article.text" ng-bind-html="::text | unsafe")
+			p(ng-repeat="text in article.text" ng-bind-html="::text | unsafe")
 
 
 		//- Social
@@ -54,92 +45,87 @@ md-content#article(layout-padding)
 			div
 				div Share this article:
 
-				//- Facebook
-				//- data-url: URL of the Shared Content
-				//- data-shares: The Scope variable on which share count will be binded to. This lets you put
-				//- multiple share buttons on a single page and bind the share count to the respective model object.
-				//- data-picture: The URL of a picture attached to the share. The picture must be at least 200px by 200px.
-				//- data-source: The URL of a media file (either SWF or MP3) attached to this share. If SWF, you must also specify picture to provide a thumbnail for the video.
-				//- data-name: The name of the link attachment.
-				//- data-caption: The caption of the link (appears beneath the link name). If not specified, this field is automatically populated with the URL of the link.
-				//- data-description: The description of the link (appears beneath the link caption). If not specified, this field is automatically populated by information scraped from the link, typically the title of the page.
-				//- data-properties: A JSON object of key/value pairs which will appear in the stream attachment beneath the description, with each property on its own line. Keys must be strings, and values can be either strings or JSON objects with the keys text and href.
-				//- data-actions: A JSON array containing a single object describing the action link which will appear next to the 'Comment' and 'Like' link under posts. The contained object must have the keys name and link.
-				//- data-callback: The Scope function which will receive [FB's Response object](https://developers.facebook.com/docs/javascript/reference/FB.ui)
-				//- data-caption="MetroMed Urgent Care"
-				a.facebookShare(facebook-feed-share 
-					data-url='https://metromeduc.com/article/{{art.article.img.src}}' 
-					data-picture="https://metromeduc.com/assets/images/articles/{{ art.article.img.src }}-600x300.jpg"
-					data-name="{{art.article.header}}"
-					data-description="{{art.article.teaser[0] + ' ' + art.article.teaser[1] + ' ' + art.article.teaser[2]}}"
-					data-email="info@metromeduc.com"
-					data-shares='shares'
-				) {{ shares }}
+				div(layout="row" layout-align="begin center")
 
-				//- Twitter
-				//- data-lang: Language of the tweet
-				//- data-url: URL of the Shared Content
-				//- data-count: Position of the share counter
-				//- data-size: Size of the tweet button
-				//- data-text: Content of the tweet
-				//- data-via: User handle which will be tagged in the tweet
-				//- For options checkout https://dev.twitter.com/docs/tweet-button
-				a(twitter 
-					data-lang="en" 
-					data-count='horizontal' 
-					data-url='https://metromeduc.com/article/{{art.article.img.src}}' 
-					data-via='metromeduc' 
-					data-size="medium" 
-					data-text='{{art.article.teaser[0]}}'
-					style="margin-left:10px;margin-right:6px"
-				)
+					//- Facebook
+					//- data-url: URL of the Shared Content
+					//- data-shares: The Scope variable on which share count will be binded to. This lets you put
+					//- multiple share buttons on a single page and bind the share count to the respective model object.
+					//- data-picture: The URL of a picture attached to the share. The picture must be at least 200px by 200px.
+					//- data-source: The URL of a media file (either SWF or MP3) attached to this share. If SWF, you must also specify picture to provide a thumbnail for the video.
+					//- data-name: The name of the link attachment.
+					//- data-caption: The caption of the link (appears beneath the link name). If not specified, this field is automatically populated with the URL of the link.
+					//- data-description: The description of the link (appears beneath the link caption). If not specified, this field is automatically populated by information scraped from the link, typically the title of the page.
+					//- data-properties: A JSON object of key/value pairs which will appear in the stream attachment beneath the description, with each property on its own line. Keys must be strings, and values can be either strings or JSON objects with the keys text and href.
+					//- data-actions: A JSON array containing a single object describing the action link which will appear next to the 'Comment' and 'Like' link under posts. The contained object must have the keys name and link.
+					//- data-callback: The Scope function which will receive [FB's Response object](https://developers.facebook.com/docs/javascript/reference/FB.ui)
+					//- data-caption="MetroMed Urgent Care"
+					a.facebookShare(facebook-feed-share 
+						data-url='https://metromeduc.com/article/{{article.img.src}}' 
+						data-picture="https://metromeduc.com/assets/images/articles/{{ article.img.src }}-600x300.jpg"
+						data-name="{{article.header}}"
+						data-description="{{article.teaser}}" 
+						data-email="info@metromeduc.com"
+						data-shares='shares') {{ shares }}
 
-				//- Google +
-				.g-plus(gplus 
-					data-size="tall" 
-					data-annotation="bubble" 
-					data-href='https://metromeduc.com/article/{{art.article.img.src}}' 
-					data-action='share'
-				)
+					//- Twitter
+					//- data-lang: Language of the tweet
+					//- data-url: URL of the Shared Content
+					//- data-count: Position of the share counter
+					//- data-size: Size of the tweet button
+					//- data-text: Content of the tweet
+					//- data-via: User handle which will be tagged in the tweet
+					//- For options checkout https://dev.twitter.com/docs/tweet-button
+					a(twitter 
+						data-lang="en" 
+						data-count='horizontal' 
+						data-url='{{::shortUrl}}' 
+						data-via='metromeduc' 
+						data-size="medium" 
+						data-text='{{::article.twitter}}'
+						data-hashtags="{{::article.keywords}}")
 
-				//- Linkedin
-				.linkedinShare(linkedin 
-					data-url='https://metromeduc.com/article/{{art.article.img.src}}' 
-					data-title='{{art.article.header}}' 
-					data-summary="{{art.article.teaser[0] + ' ' + art.article.teaser[1] + ' ' + art.article.teaser[2]}}" 
-					data-shares='linkedinshares'
-					style="margin-left:0px"
-				) {{linkedinshares}}
+					//- Google +
+					.g-plus(gplus 
+						data-size="tall" 
+						data-annotation="bubble" 
+						data-href='https://metromeduc.com/article/{{article.img.src}}' 
+						data-action='share')
 
-				//- Tumblr
-				//- data-url: URL of the content to be shared
-				//- data-name: Name of the content URL
-				//- data-title(Optional): Title of the button on hover
-				//- data-description: Description of the URL
-				//- data-style(Optional): Style of the button
-				a(tumblr-text 
-					data-url='https://metromeduc.com/article/{{art.article.img.src}}' 
-					data-name='{{art.article.header}}' 
-					data-title='{{art.article.header}}' 
-					data-buttontext='Sharing Text' 
-					data-styling="display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('https://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;" 
-					data-description='{{art.article.teaser[0] + " " + art.article.teaser[1] + " " + art.article.teaser[2]}}'
-					style="margin-left:10px"
-				)
+					//- Linkedin
+					.linkedinShare(linkedin 
+						data-url='https://metromeduc.com/article/{{article.img.src}}' 
+						data-title='{{article.header}}' 
+						data-summary="{{article.teaser}}" 
+						data-shares='linkedinshares') {{linkedinshares}}
 
-				//- Pinterest
-				//- data-href: Url To be shared
-				//- data-Description: Description of the content
-				//- data-img: Image for the Pin
-				//- data-pin-do(Optional): Type of pin
-				//- data-pin-config(Optional): Pin count Orientation 'beside' or 'above'
-				a(pintrest 
-					data-href='https://metromeduc.com/article/{{art.article.img.src}}' 
-					data-description='{{art.article.teaser[0] + " " + art.article.teaser[1] + " " + art.article.teaser[2]}}' 
-					data-img='https://metromeduc.com/assets/images/articles/{{ art.article.img.src }}-600x300.jpg' 
-					data-pin-do='buttonPin' 
-					data-pin-config='beside'
-					style="margin-left:10px"
-				)
+					//- Tumblr
+					//- data-url: URL of the content to be shared
+					//- data-name: Name of the content URL
+					//- data-title(Optional): Title of the button on hover
+					//- data-description: Description of the URL
+					//- data-style(Optional): Style of the button
+					//- a(tumblr-text 
+					//- 	data-url='https://metromeduc.com/article/{{article.img.src}}' 
+					//- 	data-name='{{article.header}}' 
+					//- 	data-title='{{article.header}}' 
+					//- 	data-buttontext='Sharing Text' 
+					//- 	data-styling="display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('https://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;" 
+					//- 	data-description='{{article.teaser}}' 
+					//- 	style="margin-left:10px")
+
+					//- Pinterest
+					//- data-href: Url To be shared
+					//- data-Description: Description of the content
+					//- data-img: Image for the Pin
+					//- data-pin-do(Optional): Type of pin
+					//- data-pin-config(Optional): Pin count Orientation 'beside' or 'above'
+					//- a(pintrest 
+					//- 	data-href='https://metromeduc.com/article/{{article.img.src}}' 
+					//- 	data-description='{{article.teaser}}' 
+					//- 	data-img='https://metromeduc.com/assets/images/articles/{{ article.img.src }}-600x300.jpg' 
+					//- 	data-pin-do='buttonPin' 
+					//- 	data-pin-config='beside'
+					//- 	style="margin-left:10px")
 
 metromed-footer

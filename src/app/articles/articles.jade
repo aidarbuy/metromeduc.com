@@ -1,3 +1,4 @@
+toolbar
 #articles.md-padding
 
   h1.md-display-1.md-primary-txt.center-txt Articles
@@ -37,31 +38,3 @@
           //- md-button Share
 
 metromed-footer
-//- md-content(layout-padding)
-  div(flex ng-cloak)
-    md-grid-list(md-cols="2" md-gutter="1em" md-row-height="1:1")
-      md-grid-tile(ng-repeat="art in arts.articles"
-                   md-colspan="1" 
-                   md-rowspan="1")
-        md-grid-tile-header
-          h3 {{art.header}}
-        //- md-grid-tile-content
-        img(ng-src="assets/images/articles/{{art.img.src}}-152x152.jpg"
-              width="221"
-              height="221")
-          //- md-card(flex="100")
-            md-card-title
-              md-card-title-text
-                span.md-headline 
-                span.md-subhead {{art.date}}
-            md-card-content(layout="row" layout-align="space-between")
-              div.md-media-xl.card-media
-                md-card-actions(layout="column")
-                  md-button.md-icon-button(aria-label="Favorite")
-                    md-icon(md-svg-icon="assets/icons/favorite.svg")
-                  md-button.md-icon-button(aria-label="Settings")
-                    md-icon(md-svg-icon="assets/icons/menu.svg")
-                  md-button.md-icon-button(aria-label="Share")
-                    md-icon(md-svg-icon="assets/icons/share-arrow.svg")
-        md-grid-tile-footer
-          h3 This is a footer

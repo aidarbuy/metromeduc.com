@@ -1,8 +1,10 @@
+//- ng-class="{'background-color':(i.bgColor)};"
 #top-sidebar(layout="row" layout-wrap)
-
-	md-card.md-whiteframe-1dp(ng-repeat="i in ts.data" flex="100" flex-gt-xs="50" flex-gt-sm="50" flex-gt-md="25" ng-style="{'background-color':(i.bgColor)};")
-
-		//- md-card(flex ng-style="{'background-color':(i.bgColor)};")
-		md-card-content
-
-			ng-include(src="'../app/components/top-sidebar/' + $index + '.html'")
+    .cell.md-whiteframe-2dp(ng-repeat="i in ts.data" 
+                            class="cell-{{$index+1}}"
+                            layout="column" 
+                            layout-align="center center"
+                            flex-gt-md="25" 
+                            flex-gt-xs="50" 
+                            flex-xs="100")
+        ng-include(src="'app/components/top-sidebar/' + $index + '.html'")

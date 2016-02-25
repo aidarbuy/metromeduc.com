@@ -1,8 +1,9 @@
 export var articles = [{
   header: "The Pre-Diagnoses",
   date: 'January 31, 2016',
-  keywords: "prediagnoses, prediagnosis, pre-diagnoses, pre-diagnosis, hypertension, diabetes, pre-hypertension, pre-diabetes, diagnoses, diagnosis, higher blood pressure, higher blood sugar, HbA1c, low-salt diet",
   teaser: 'Used to be we had hypertension, diabetes and many other. But now we also have pre&#8209;hypertension, pre&#8209;diabetes, etc. What is a pre&#8209;diagnosis?',
+  twitter: 'Used to be we had hypertension, diabetes and many other. But now we also have pre-hypertension, pre-diabetes, etc. What is a pre-diagnosis?',
+  keywords: "prediagnoses, prediagnosis, pre-diagnoses, pre-diagnosis, hypertension, diabetes, pre-hypertension, pre-diabetes, diagnoses, diagnosis, higher blood pressure, higher blood sugar, HbA1c, low-salt diet",
   text: [
     'Used to be we had hypertension, diabetes and many other diagnoses.',
     'We still have all those diagnoses. But now we also have pre&#8209;hypertension, pre&#8209;diabetes, etc.',
@@ -26,6 +27,8 @@ export var articles = [{
   header: "How to Save Money on Prescriptions",
   date: 'December 6, 2015',
   teaser: 'Here are some tips: Obtain a copy of your insurance company’s Drug Formulary. Show doctor the formulary so that they can choose a medication covered by your plan.',
+  twitter: 'Here are some tips on how to not spend exorbitant amounts on medications unnecessarily:',
+  keywords: 'prescription, prescriptions, save money, insurance',
   text: [
     'Here are some tips on how to not spend exorbitant amounts on medications unnecessarily:',
     '<ol><li>Obtain a copy of your insurance company’s <b>Drug Formulary</b> and take it with you to every doctor appointment.  The formulary is a listing of which medications are covered by your insurance.  When the doctor is prescribing you a medication, show them the formulary so that they can choose a medication covered by your plan.</li>',

@@ -1,43 +1,5 @@
-#tabs-menu {
-	// margin-top: 64px;
-	// background: red;
+#tabs {
 	z-index: 90;
-	// z-index: 200;
 	border-top: 1px solid #56cce1;
-	min-height: 20px;
-	height: 20px;
-	max-height:20px;
-	line-height: 20px;
-	margin-bottom: 25px;
-	.md-toolbar-tools	{
-		z-index: 200;
-		.md-button {
-		}
-	}
-	md-ink-bar {
-	  position: absolute;
-	  left: auto;
-	  right: auto;
-	  bottom: 20;
-	  height: 2px;
-	}
-}
-
-md-toolbar > md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar > md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {
-  // color: rgba(0,0,0,0.87);
-  color: white;
-}
-
-md-toolbar:not(.md-menu-toolbar) md-icon {
-  // color: rgba(0,0,0,0.87);
-  color: white;
-}
-.current-btn {
-	border-top: 1px solid white;
-	//- border-bottom: 1px solid white;
-	//- background: #56cce1;
-}
-
-md-tabs-canvas {
-  // height: 45px; 
-}
+	md-tabs .md-tab.md-active {
+		color: white}}

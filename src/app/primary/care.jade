@@ -7,8 +7,8 @@
 		.md-card-header
 			img.md-card-image(ng-src="assets/images/primary/mattbeckwith_whitebg_closer.jpg")
 			.md-card-header-bg
-			h2.md-display-2(ng-bind="::pc.content.header" hide-sm)
-			h2.md-headline(ng-bind="::pc.content.header" hide-gt-sm)
+			h2.md-display-2(ng-bind="::pc.content.header" hide show-gt-xs)
+			h2.md-headline(ng-bind="::pc.content.header" hide-gt-xs)
 		md-card-content
 			p(ng-repeat="t in pc.content.text" ng-bind-html="::t | unsafe")
 
