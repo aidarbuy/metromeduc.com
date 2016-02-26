@@ -1,23 +1,14 @@
 #virtual-tour {
-
 	h1 {}
-
 	md-card {
 		md-card-content {			
 			h2 {
 				text-align: center;
 				color: $md-hue-2;
-				color: $md-accent-hue-2;
-				color: $md-primary;
-				color: $md-accent;
-			}
-
+				// color: $md-accent-hue-2;
+				// color: $md-accent;
+				color: $md-primary}
 			p {}
-
 			iframe {
 				width: 100%;
-				border: 0;
-			}
-		}
-	}
-}
+				border: 0}}}}

@@ -1,14 +1,14 @@
+toolbar
+
 #pay.md-padding
-  md-content(layout-padding)
+    md-content(layout-padding)
+        //- input(type="text" ng-model="number" payments-validate="card")
+        //- span(us-spinner="" spinner-theme="smallRed")
+        //- span(us-spinner="" spinner-theme="bigBlue")
+        form(stripe-form="stripeCallback")
+            input(ng-model="number" placeholder="Card Number")
+            input(ng-model="expiry" placeholder="Expiration")
+            input(ng-model="cvc" placeholder="CVC")
+            button(type="submit") Submit
 
-    //- input(type="text" ng-model="number" payments-validate="card")
-
-
-    //- span(us-spinner="" spinner-theme="smallRed")
-    //- span(us-spinner="" spinner-theme="bigBlue")
-
-    form(stripe-form="stripeCallback")
-      input(ng-model="number" placeholder="Card Number")
-      input(ng-model="expiry" placeholder="Expiration")
-      input(ng-model="cvc" placeholder="CVC")
-      button(type="submit") Submit
+metromed-footer

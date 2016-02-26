@@ -77,6 +77,27 @@ $g-green-light: #91cea8;
 	/* Support for IE. */
 	font-feature-settings: 'liga'}
 
+.margin-left-1px {margin-left: 1px}
+.margin-left-2px {margin-left: 2px}
+.margin-left-3px {margin-left: 3px}
+.margin-left-4px {margin-left: 4px}
+.margin-left-5px {margin-left: 5px}
+.margin-left-6px {margin-left: 6px}
+.margin-left-7px {margin-left: 7px}
+.margin-left-8px {margin-left: 8px}
+.margin-left-9px {margin-left: 9px}
+.margin-left-10px {margin-left: 10px}
+.margin-right-1px {margin-right: 1px}
+.margin-right-2px {margin-right: 2px}
+.margin-right-3px {margin-right: 3px}
+.margin-right-4px {margin-right: 4px}
+.margin-right-5px {margin-right: 5px}
+.margin-right-6px {margin-right: 6px}
+.margin-right-7px {margin-right: 7px}
+.margin-right-8px {margin-right: 8px}
+.margin-right-9px {margin-right: 9px}
+.margin-right-10px {margin-right: 10px}
+
 html {
 	// font-family: 'Roboto Slab', serif;
 	font-family: "Whitney SSm A", "Whitney SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -139,7 +160,7 @@ $box_color_4: #1b90da;
 md-toolbar.md-accent > md-tabs.md-default-theme, md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
 	color: rgb(240,240,240)}
 
-.tooltip-big { font-size: 120% }
+.tooltip-big {font-size: 100%}
 
 // Stick to screen
 // .stick-to-screen {

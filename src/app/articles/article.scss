@@ -1,31 +1,37 @@
 #article {
 	md-card {
-		md-button {
+		md-card-actions {
+			.md-button {
+				// margin: 0;
+				// padding:0;
+				// max-height: 36px;
+				md-icon {
+					// margin: 0;
+					// padding: 0;
+					// top: 50%;
+					// bottom: auto;
+					// display: inline;
+					// position: relative;
+					// transform: translateY(-50%);
+					// background: red;
+					// margin-top: 10px;
+					// color: $md-hue-2;
+					// margin-bottom: auto;
+				}
+				span {
+					// margin: 0;
+					// padding: 0;
+				}
+			}
 		}
-
 		md-card-title {
 			md-card-title-text {
-				color: $md-primary;
-			}
-		}
-
+				color: $md-primary}}
 		md-card-actions {
-			a.facebookShare {
-				// margin-bottom: 1px;
-			}
-
+			a.facebookShare {}
 			a[twitter] {
 				margin-left: 10px; 
 				margin-right: 11px; 
-				margin-top: 9px;
-			}
-
-			.g-plus {
-			}
-
-			.linkedinShare {
-				margin-left: 10px;
-			}
-		}
-	}
-}
+				margin-top: 9px}
+			.g-plus {}
+			.linkedinShare {margin-left: 10px}}}}

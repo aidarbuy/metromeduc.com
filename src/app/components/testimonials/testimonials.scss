@@ -1,4 +1,4 @@
-md-card#testimonials {
+#testimonials {
 	md-toolbar {
 		.md-toolbar-tools {	
 			md-icon {
@@ -6,30 +6,43 @@ md-card#testimonials {
 				height: 40px;
 				margin-right: 10px;
 			}
-			span {}
-			h2 {}
+			span {
+			}
+			h2 {
+			}
 		}
 	}
-
 	md-card-content {
 		md-list {
+			// background: #eee;
 			md-list-item {
-				padding-top: 20px;
-				padding-bottom: 20px;
-
+				// background: #ddd;
+				margin-bottom: 10px;
+				// padding-top: 20px;
+				padding-bottom: 25px;
 				img {
 					width: 70px;
 					height: 70px;
 				}
-				.md-list-item-text {	
-					h3 { font-size: x-large }
-					h4 { font-size: large }
-					p { font-size: 110% }
+				.md-list-item-text {
+					h3 {
+						// background: #ccc;
+					}
+					h4 {
+						// background: #bbb;
+						padding-bottom: 10px;
+					}
+					p {
+						// background: #aaa;
+					}
 				}
 				md-divider {
 					left: 0;
 					width: 100%;
 				}
+			}
+			md-divider {
+				// background: red;
 			}
 		}
 	}

@@ -1,8 +1,8 @@
-#primary-care.md-padding
+toolbar
 
+#primary-care.md-padding
 	h1.md-display-1(ng-bind="::pc.pageTitle")
 	//- h2.md-headline(ng-bind="::pc.headline")
-
 	md-card.md-whiteframe-z2
 		.md-card-header
 			img.md-card-image(ng-src="assets/images/primary/mattbeckwith_whitebg_closer.jpg")
@@ -11,6 +11,5 @@
 			h2.md-headline(ng-bind="::pc.content.header" hide-gt-xs)
 		md-card-content
 			p(ng-repeat="t in pc.content.text" ng-bind-html="::t | unsafe")
-
 
 metromed-footer

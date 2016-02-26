@@ -1,35 +1,21 @@
 #custom-services {
-
 	div {
-
 		md-card {
 			min-height: 350px;
 			height: auto;
-			// cursor: pointer;
-
 			md-card-content {
 				padding-top: 10%;
 				text-align: center;
-
 				md-icon {
 					width: 70px;
 					height: 70px;
-				}
-
+					fill: #2cbfd9}
 				h2 {
-					margin-top: 10px;
-				}
-
+					margin-top: 10px}
 				p {
 					margin-top: 0;
-					line-height: 150%;
-					font-size: 110%;
-				}
-			}
+					font-size: 90%;
+					line-height: 150%}}
 			.md-button {
 				padding-left: 10px;
-				padding-right: 10px;
-			}
-		}
-	}
-}
+				padding-right: 10px}}}}

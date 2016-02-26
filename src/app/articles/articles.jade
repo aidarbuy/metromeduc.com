@@ -1,40 +1,45 @@
 toolbar
 #articles.md-padding
-
-  h1.md-display-1.md-primary-txt.center-txt Articles
-
-  md-content#articles.md-padding(layout-xs="column" 
-                        layout="row" 
-                        layout-wrap)
-    //-  
-      xs :    0...600
-      sm :  600...960
-      md :  960..1280
-      lg : 1280..1920
-      xl : 1920......
-    div(flex-xs="100" 
-        flex-sm="100" 
-        flex-md="50" 
-        flex-lg="50" 
-        flex-xl="25" 
-        layout="column" 
-        ng-repeat="art in arts.articles")
-
-      md-card.md-whiteframe-2dp.stick-to-screen
-        md-card-title
-          md-card-title-text
-            span.md-headline.md-primary-txt(ng-bind="::art.header")
-            span.md-subhead.md-primary-txt-hue2(ng-bind="::art.date")
-            span.md-subhead.article-teaser(ng-bind-html="::art.teaser | unsafe")
-
-          md-card-title-media
-            div.md-media-lg.card-media
-              img(ng-src="assets/images/articles/{{art.img.src}}-152x152.jpg")
-        //- md-card-content
-          p(ng-repeat="t in art.teaser" ng-bind-html="::t | unsafe")
-
-        md-card-actions(layout="row" layout-align="end center")
-          md-button.md-primary(ui-sref="article({id:art.img.src})") Read article
-          //- md-button Share
+	h1.md-display-1.md-primary-txt.center-txt Articles
+	//- xs :    0...600
+		sm :  600...960
+		md :  960..1280
+		lg : 1280..1920
+		xl : 1920......
+	md-content(layout="row" layout-wrap)
+		div(ng-repeat="art in arts.articles"
+			flex-gt-md="33" 
+			flex-gt-xs="50" 
+			flex-xs="100")
+			//- md-card.md-whiteframe-4dp
+				md-card-title
+					md-card-title-text
+						span.md-headline.md-primary-txt(ng-bind="::art.header")
+						span.md-subhead.md-primary-txt-hue2(ng-bind="::art.date")
+						span.md-subhead.article-teaser(ng-bind-html="::art.teaser | unsafe")
+					md-card-title-media
+						img.md-media-lg.card-media(ng-src="assets/images/articles/{{art.img.src}}-152x152.jpg")
+				md-card-actions(layout="row" layout-align="end center")
+					md-button.md-primary(ui-sref="article({id:art.img.src})") Read article
+			md-card
+				//- md-card-header
+					md-card-avatar
+						img.md-user-avatar(src="assets/images/doctors/matthew-820x465.jpg")
+					md-card-header-text
+						span.md-title User
+						span.md-subhead subhead
+				.holder
+					img.md-card-image(ng-src="assets/images/articles/{{art.img.src}}-600x300.jpg" alt="Washed Out")
+				md-card-title
+					md-card-title-text
+						span.md-headline.md-primary-txt(ng-bind="::art.header")
+						span.md-subhead.md-primary-txt-hue2(ng-bind="::art.date")
+				md-card-content
+					p(ng-bind-html="::art.teaser | unsafe")
+				md-card-actions(layout="row" layout-align="end center")
+					md-button.md-primary(ui-sref="article({id:art.img.src})") Read More...
+					//- md-card-icon-actions
+						md-button.md-icon-button(aria-label="toggle")
+							md-icon(md-svg-icon="md-toggle-arrow")
 
 metromed-footer

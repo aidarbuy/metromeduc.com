@@ -8,14 +8,12 @@ export function CustomServicesDirective() {
 		controller: CustomServicesController,
 		controllerAs: 'cs'
 	};
-
 	return directive;
 }
 
 class CustomServicesController {
 	constructor () {
 		'ngInject';
-
 		this.data = CustomServices;
 	}
 }

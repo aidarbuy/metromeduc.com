@@ -1,5 +1,31 @@
 #articles {
 	md-card {
-		// min-height: 470px;
+		// background: red;
+		// min-height: 550px;
+		.holder {
+			// background: green;
+			width: auto;
+			display: inline-block;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		md-card-title {
+			// background: #56cce1;
+			md-card-title-text {
+				// background: #2cbfd9;
+			}
+			md-card-title-media {
+				// background: yellow;
+				margin-left: 10px;
+			}
+		}
+		md-card-content {
+			// background: #2ca6d9;
+		}
+		md-card-actions {
+			// background: #1b90da;
+		}
 	}
 }

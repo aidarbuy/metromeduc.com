@@ -1,18 +1,16 @@
-md-card#testimonials.md-whiteframe-4dp
-	md-toolbar.md-hue-2
-		.md-toolbar-tools(layout="row")
-			span(flex)
-			md-icon(md-svg-src="assets/icons/feedback.svg")
-			h2.md-headline Testimonials
-			span(flex)
-
-	md-card-content
-		md-list
-			md-list-item.md-3-line(ng-repeat="t in t.testimonials")
-				img.md-avatar(ng-src="assets/images/testimonials/{{::t.img}}" alt="{{::t.name}}")
-				.md-list-item-text
-					h3(ng-bind="::t.name")
-					h4(ng-bind="::t.city")
-					br
-					p(ng-bind="::t.text")
-				md-divider(md-inset ng-if="!$last")
+md-card#testimonials.md-whiteframe-4dp(ng-cloak)
+    md-toolbar.md-hue-2
+        .md-toolbar-tools(layout="row")
+            span(flex)
+            md-icon(md-svg-src="assets/icons/feedback.svg")
+            h2.md-headline Testimonials
+            span(flex)
+    md-card-content
+        md-list
+            md-list-item.md-3-line.md-long-text(ng-repeat="t in t.testimonials")
+                img.md-avatar(ng-src="assets/images/testimonials/{{::t.img}}" alt="{{::t.name}}")
+                .md-list-item-text
+                    h3(ng-bind="::t.name")
+                    h4(ng-bind="::t.city")
+                    p(ng-bind="::t.text")
+                md-divider(ng-hide="$last")

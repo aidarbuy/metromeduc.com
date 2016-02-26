@@ -1,58 +1,62 @@
 #top-sidebar {
 	padding: 8px;
 	padding-top: 0;
+	.cell-1 {background: $box-color-1}
+	.cell-2 {background: $box-color-2}
+	.cell-3 {background: $box-color-3}
+	.cell-4 {background: $box-color-4}}
 	.cell {
 		top: 0px;
-		background: green;
-		background: #box_color_1;
 		min-height: 250px;
 		margin: 0px;
 		padding: 0px;
 		padding-left: 10px;
 		padding-right: 10px;
-		opacity: 0.9;
 		color: white;
+		opacity: 0.9;
 		-webkit-transition: opacity 0.4s ease-out 0s;
 		-moz-transition: opacity 0.4s ease-out 0s;
 		-o-transition: opacity 0.4s ease-out 0s;
 		-ms-transition: opacity 0.4s ease-out 0s;
 		transition: opacity 0.4s ease-out 0s;
-		&:hover {
-			opacity: 1}
+		&:hover {opacity: 1}
 		#contact-info {
-			backgroun: red}
+			// font-weight: 600;
+			font-size: 110%;
+		}
 		#hours-of-operation {
 			width: 100%;
 			height: 100%;
 			padding-left: 10px;
 			padding-right: 10px;
-			.cell-left {
+			.td-left {
 				width: 45%;
 				text-align: right}
-			.cell-center {
+			.td-center {
 				width: 5%;
 				text-align: center;
 				color: #ddd}
-			.cell-right {
-				width: 45%}}
+			.td-right {
+				width: 45%;
+				text-align: left}}
+		#urgent-care {
+			h2 {}
+			p {
+				font-size: 110%;
+			}
+		}
 		h2 {
 			margin: 0;
 			margin-bottom: 20px;
 			.accent {
 				font-size: 140%;
 				font-weight: bold}}
-		.md-title {}
 		p {
+			// background: red;
+			margin-top: 7px;
+			margin-bottom: 7px;
 			a {
 				color: white;
-				text-decoration: none}}
-		p.p-accent {
-			font-size: 120%}}
-	.cell-1 {
-		background: $box-color-1}
-	.cell-2 {
-		background: $box-color-2}
-	.cell-3 {
-		background: $box-color-3}
-	.cell-4 {
-		background: $box-color-4}}
+				text-decoration: none}
+			.p-accent {
+				font-size: 120%}}}
