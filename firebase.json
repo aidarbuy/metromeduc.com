@@ -2,9 +2,16 @@
   "firebase": "metromeduc",
   "public": "dist",
   "ignore": [
+    ".tmp",
+    "**/bash/**",
+    "**/bower_components/**",
+    "**/e2e/**",
+    "**/gulp/**",
+    "**/node_modules/**",
+    "**/server",
+    "**/src/**",
     "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
+    "**/.*"
   ],
   "rewrites": [{
     "source": "**",
