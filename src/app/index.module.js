@@ -68,6 +68,7 @@ import { CalendarController } from './calendar/calendar.ctrl';
 
 // Pay
 import { PayController } from './pay/pay.ctrl';
+// import { StripeCheckout } from './pay/stripe.fctr';
 
 // Footer
 import { FooterDirective } from '../app/components/navigation/footer/footer.drct';
@@ -78,7 +79,7 @@ angular.module('metromed', [
     'ngAnimate', 'ngCookies', 'ngSanitize', 'ngMessages', 
     'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 
     'updateMeta', 'toastr', 'uiGmapgoogle-maps', 
-    'djds4rce.angular-socialshare', 'firebase',
+    'djds4rce.angular-socialshare', 'firebase', 'stripe.checkout', 'angular-stripe',
     'ui.calendar', 'angularLoad', 'angularPayments', 'angularSpinner'
   ])
   .constant('malarkey', malarkey)
@@ -151,6 +152,7 @@ angular.module('metromed', [
 
   // Pay
   .controller('PayController', PayController)
+  // .factory('StripeCheckout', StripeCheckout)
 
   // Footer
   .controller('GridBottomSheetController', GridBottomSheetCtrl)

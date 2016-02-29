@@ -1,14 +1,26 @@
 toolbar
 
-#pay.md-padding
-    md-content(layout-padding)
-        //- input(type="text" ng-model="number" payments-validate="card")
-        //- span(us-spinner="" spinner-theme="smallRed")
-        //- span(us-spinner="" spinner-theme="bigBlue")
-        form(stripe-form="stripeCallback")
-            input(ng-model="number" placeholder="Card Number")
-            input(ng-model="expiry" placeholder="Expiration")
-            input(ng-model="cvc" placeholder="CVC")
-            button(type="submit") Submit
+#pay.md-padding(layout="column" layout-align="center center")
+	h2.md-display-1.md-primary-txt.center-txt Make a payment
+
+	md-button.md-raised.md-primary(stripe-checkout="pay.doCheckout"
+		data-key="pk_test_qj7EuqutFInexh32vAGo41V8"
+		data-image="assets/icons/logo.svg" 
+		data-name="MetroMed UC"
+		data-description="2 services ($100.00)"
+		data-amount="500") Buy
+
+	//- div(layout="row" layout-align="center center")
+		md-button.md-primary.md-hue-2.md-raised(id="customButton" ng-click="checkout()") Purchase
+
+	//- md-content(layout-padding)
+		//- input(type="text" ng-model="number" payments-validate="card")
+		//- span(us-spinner="" spinner-theme="smallRed")
+		//- span(us-spinner="" spinner-theme="bigBlue")
+		form(stripe-form="stripeCallback")
+			input(ng-model="number" placeholder="Card Number")
+			input(ng-model="expiry" placeholder="Expiration")
+			input(ng-model="cvc" placeholder="CVC")
+			button(type="submit") Submit
 
 metromed-footer

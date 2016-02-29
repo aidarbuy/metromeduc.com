@@ -27,7 +27,9 @@
     "angular-ui-calendar": "^1.0.1",
     "angular-load": "^0.4.1",
     "angular-payments": "2472bc9befa25678",
-    "angular-spinner": "^0.8.1"
+    "angular-spinner": "^0.8.1",
+    "angular-stripe": "^4.2.11",
+    "angular-stripe-checkout": "^4.0.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"

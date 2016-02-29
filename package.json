@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "connect-history-api-fallback": "^1.1.0",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "stripe": "^4.4.0"
   },
   "scripts": {
     "test": "gulp test"
