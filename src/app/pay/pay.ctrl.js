@@ -45,8 +45,8 @@ export class PayController {
         function createCharge(token) {
             var charge = new Charge();
             charge.stripeToken = token.id;
-            charge.$save().then(function() {
-                $log.log("test");
+            charge.$save().then(function(charge) {
+                $log.log(charge);
             })
         }
 

@@ -99,13 +99,13 @@ app // routes
 		}).then(function(charge) {
 			console.log("The card has been successfully charged!");
 		  	console.log(charge.status);
+			res.send(charge);
 		}, function(err) {
 		  if (err && err.type === 'StripeCardError') {
 		    console.log("The card has been declined");
 		    console.log("Error: ", err);
 		  }
 		});
-		res.send(charge);
 	});
 
 // Server
