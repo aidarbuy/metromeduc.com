@@ -3,11 +3,14 @@ toolbar
 #pay.md-padding(layout="column" layout-align="center center")
 	h2.md-display-1.md-primary-txt.center-txt Make a payment
 
-	md-button.md-raised.md-primary(stripe-checkout="pay.doCheckout"
-		data-key="pk_test_qj7EuqutFInexh32vAGo41V8"
-		data-image="assets/icons/logo.svg" 
-		data-name="MetroMed UC"
-		data-description="2 services ($100.00)"
+	h1#payment-form(ng-bind="")
+
+	md-button.md-raised.md-primary.md-hue-2(ng-click="pay.doCheckoutTest()") Test
+
+	md-button.md-raised.md-primary.md-hue-2(stripe-checkout="pay.doCheckout" 
+		data-key="pk_test_qj7EuqutFInexh32vAGo41V8" 
+		data-name="MetroMed UC" 
+		data-description="2 services ($100.00)" 
 		data-amount="500") Buy
 
 	//- div(layout="row" layout-align="center center")

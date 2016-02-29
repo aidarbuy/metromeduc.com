@@ -6,7 +6,7 @@
 
 // Set your secret key: remember to change this to your live secret key in production
 // See your keys here https://dashboard.stripe.com/account/apikeys
-var stripe = require("stripe")("pk_test_qj7EuqutFInexh32vAGo41V8");
+var stripe = require("stripe")("sk_test_vikl2WWRYd8OwQ4QYguvlYRT");
 
 var express = require('express'),
 	http = require('http'),
@@ -42,6 +42,30 @@ var express = require('express'),
 // 	.set('views', __dirname)
 // 	.set('view engine', 'jade');
 
+// Add headers
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'https://metromeduc.herokuapp.com');
+    // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000']);
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
+});
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 app // routes
 	.get('/api/doctors', function(req, res) {
 		// Doctor.find({}, function(err, data) {
@@ -60,10 +84,9 @@ app // routes
 	})
 	.get('*', function(req, res) {
 		// res.render('index');
-		console.log('serving index page');
+		console.log('serving');
 	})
-	.post('/pay', function(req, res) {
-		// (Assuming you're using express - expressjs.com)
+	.post('/charge', function(req, res) {
 		// Get the credit card details submitted by the form
 		var stripeToken = req.body.stripeToken;
 
@@ -72,11 +95,14 @@ app // routes
 		  currency: "usd",
 		  source: stripeToken,
 		  description: "Example charge"
-		}, function(err, charge) {
+		}).then(function(charge) {
+			console.log("The card has been successfully charged!");
+		  	console.log(charge.status);
+		}, function(err) {
 		  if (err && err.type === 'StripeCardError') {
-		    res.send("The card has been declined");
+		    console.log("The card has been declined");
+		    console.log("Error: ", err);
 		  }
-		  res.send("The card has been successfully charged!");
 		});
 	});
 

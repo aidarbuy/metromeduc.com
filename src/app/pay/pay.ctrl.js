@@ -1,15 +1,54 @@
 export class PayController {
-    constructor($log, $resource) {
+    constructor($log, $scope, stripe, $resource) {
         'ngInject';
 
-        this.doCheckout = function(token) {
-          $log.log("Got Stripe token: " + token.id);
-          var Charge = $resource('https://metromeduc.herokuapp.com/pay');
-          var charge = Charge.save({stripeToken:token}, function() {
-              $log.log("Stripe token posted.");
-              $log.log(charge);
-          });
+        // var Charge = $resource('https://metromeduc.herokuapp.com/pay');
+        var Charge = $resource('http://localhost:8000/charge');
+
+        this.doCheckoutTest = function() {
+            $log.log("Creating a charge:");
+            stripe.card.createToken({
+                number: 4242424242424242,
+                cvc: 123,
+                exp_month: 9,
+                exp_year: 16
+            }, function(status, response) {
+                $log.log(response);
+                createCharge(response);
+            })
         };
+
+        this.doCheckout = function(token) {
+            // var charge.stripeToken = token.id;
+            $log.log("Got Stripe token: ", token.id);
+            createCharge(token);
+            // return $http.post('http://localhost:8000/pay', token);
+        };
+
+        // function stripeResponseHandler(status, response) {
+        //     var $form = angular.element('#payment-form');
+
+        //     if (response.error) {
+        //         // Show the errors
+        //         $scope.errorMessage = response.error.message;
+        //         $scope.buttonDisabled = false;
+        //     } else {
+        //         // response contains id and card, which contains additional card details
+        //         var token = response.id;
+        //         // Insert the token into the form so it gets submitted to the server
+        //         $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        //         // and submit
+        //         $form.get(0).submit();
+        //     }
+        // };
+
+        function createCharge(token) {
+            var charge = new Charge();
+            charge.stripeToken = token.id;
+            charge.$save().then(function() {
+                $log.log("test");
+            })
+        }
 
         // $scope.checkout = function(e) {
             // var handler = StripeCheckout.configure({
