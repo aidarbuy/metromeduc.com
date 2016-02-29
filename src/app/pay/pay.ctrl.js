@@ -4,9 +4,10 @@ export class PayController {
 
         this.doCheckout = function(token) {
           $log.log("Got Stripe token: " + token.id);
-          var Charge = $resource('http://localhost:8000/pay');
+          var Charge = $resource('https://metromeduc.herokuapp.com/pay');
           var charge = Charge.save({stripeToken:token}, function() {
               $log.log("Stripe token posted.");
+              $log.log(charge);
           });
         };
 

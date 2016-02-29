@@ -62,10 +62,10 @@ app // routes
 		// res.render('index');
 		console.log('serving index page');
 	})
-	.post('/pay', function(request, response) {
+	.post('/pay', function(req, res) {
 		// (Assuming you're using express - expressjs.com)
 		// Get the credit card details submitted by the form
-		var stripeToken = request.body.stripeToken;
+		var stripeToken = req.body.stripeToken;
 
 		var charge = stripe.charges.create({
 		  amount: 1000, // amount in cents, again
@@ -74,9 +74,9 @@ app // routes
 		  description: "Example charge"
 		}, function(err, charge) {
 		  if (err && err.type === 'StripeCardError') {
-		    console.log("The card has been declined");
+		    res.send("The card has been declined");
 		  }
-		  console.log("The card has been successfully charged!");
+		  res.send("The card has been successfully charged!");
 		});
 	});
 
