@@ -105,6 +105,7 @@ app // routes
 		    console.log("Error: ", err);
 		  }
 		});
+		res.send(charge);
 	});
 
 // Server

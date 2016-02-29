@@ -2,7 +2,7 @@ export class PayController {
     constructor($log, $scope, stripe, $resource) {
         'ngInject';
 
-        var Charge = $resource('https://metromeduc.herokuapp.com/pay');
+        var Charge = $resource('http://metromeduc.herokuapp.com/charge');
         // var Charge = $resource('http://localhost:8000/charge');
 
         this.doCheckoutTest = function() {
