@@ -116,13 +116,19 @@ html {
 
 md-toolbar.md-default-theme {}
 
+
+//////////////////////////////////////////////////////////////
+// Animations
+
 /* The starting CSS styles for the enter animation */
 .fade.ng-enter {
 	transition: 0.5s linear all;
-	opacity: 0}
+	opacity: 0;
+}
 /* The finishing CSS styles for the enter animation */
 .fade.ng-enter.ng-enter-active {
-	opacity: 1}
+	opacity: 1;
+}
 /* The starting CSS styles for the leave animation */
 // .fade.ng-leave {
 	// transition:.5s linear all;
@@ -132,6 +138,26 @@ md-toolbar.md-default-theme {}
 // .fade.ng-leave.ng-leave-active {
 	// opacity:0;
 // }
+
+.slide.ng-enter {
+	-webkit-transition: 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-moz-transition: 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-ms-transition: 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-o-transition: 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	transition: 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+.slide.ng-enter {
+	background: red;
+    // top: -100%;
+    // opacity: 0;
+}
+.slide.ng-enter.ng-enter-active {
+	background: green;
+    // top: 0;
+    // opacity: 1;
+}
+
+
 
 md-content.md-default-theme {
 	background-color: $gray;

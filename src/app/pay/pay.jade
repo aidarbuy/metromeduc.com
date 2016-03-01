@@ -1,29 +1,38 @@
 toolbar
 
 #pay.md-padding(layout="column" layout-align="center center")
-	h2.md-display-1.md-primary-txt.center-txt Make a payment
 
-	h1#payment-form(ng-bind="")
+	h2.md-display-1.md-primary-txt(
+		ng-bind="'Make a payment'")
 
-	md-button.md-raised.md-primary.md-hue-2(ng-click="pay.doCheckoutTest()") Test
+	md-progress-circular(
+		md-mode="indeterminate"
+		ng-if="showProgress")
+	
+	md-card.fade(
+		ng-if="chargeItems")
+		md-toolbar.md-hue-2.md-toolbar-tools(
+			ng-bind="notification")
+		md-card-content
+			md-list
+				md-list-item.md-title.fade(
+					ng-repeat="(key, value) in chargeItems"
+					ng-bind="'{{key}}: {{value}}'")
 
-	md-button.md-raised.md-primary.md-hue-2(stripe-checkout="pay.doCheckout" 
-		data-key="pk_test_qj7EuqutFInexh32vAGo41V8" 
-		data-name="MetroMed UC" 
-		data-description="2 services ($100.00)" 
-		data-amount="500") Buy
-
-	//- div(layout="row" layout-align="center center")
-		md-button.md-primary.md-hue-2.md-raised(id="customButton" ng-click="checkout()") Purchase
-
-	//- md-content(layout-padding)
-		//- input(type="text" ng-model="number" payments-validate="card")
-		//- span(us-spinner="" spinner-theme="smallRed")
-		//- span(us-spinner="" spinner-theme="bigBlue")
-		form(stripe-form="stripeCallback")
-			input(ng-model="number" placeholder="Card Number")
-			input(ng-model="expiry" placeholder="Expiration")
-			input(ng-model="cvc" placeholder="CVC")
-			button(type="submit") Submit
+	div.fade(layout="row" 
+		layout-align="center center" 
+		ng-if="showButtons")
+		md-button.md-raised.md-accent.md-hue-3(
+			aria-label="Test Charge"
+			ng-click="doTestCheckout()" 
+			ng-bind="'Test Charge'")
+		md-button.md-raised.md-accent.md-hue-2(
+			aria-label="Check out" 
+			stripe-checkout="pay.doCheckout" 
+			data-key="pk_test_qj7EuqutFInexh32vAGo41V8" 
+			data-name="MetroMed UC" 
+			data-description="2 services ($100.00)" 
+			data-amount="500"
+			ng-bind="'Check-out'")
 
 metromed-footer
