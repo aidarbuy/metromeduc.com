@@ -32,6 +32,16 @@ export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvi
 				$title: function() { return 'Services'; }
 			}
 		})
+		.state('services2', {
+			url: '/services2',
+			templateUrl: 'app/services2/services.html',
+			controller: 'Services2Controller',
+			controllerAs: 'srv2',
+			resolve: {
+				// Constant title
+				$title: function() { return 'Services 2'; }
+			}
+		})
 		.state('doctors', {
 			url: '/doctors',
 			templateUrl: 'app/doctors/doctors.html',
@@ -162,6 +172,16 @@ export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvi
 			resolve: {
 				// Constant title
 				$title: function() { return 'Pay'; }
+			}
+		})
+		.state('telemed', {
+			url: '/telemed',
+			templateUrl: 'app/telemed/telemed.html',
+			controller: 'TelemedController',
+			controllerAs: 'tm',
+			resolve: {
+				// Constant title
+				$title: function() { return 'Telemedicine'; }
 			}
 		});
 

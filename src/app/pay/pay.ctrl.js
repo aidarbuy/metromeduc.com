@@ -2,14 +2,14 @@ export class PayController {
     constructor($log, $scope, $timeout, stripe, $resource) {
         'ngInject';
 
-        var Charge = $resource('http://metromeduc.herokuapp.com/charge');
-        // var Charge = $resource('http://localhost:8000/charge');
-        $scope.notification = "Your payment was successful!"
+        // var Charge = $resource('https://metromeduc.herokuapp.com/charge');
+        var Charge = $resource('http://localhost:8000/charge');
+        $scope.notification = "Your payment was successful!";
         $scope.showNotification = false;
         $scope.showButtons = true;
         $scope.showProgress = false;
 
-        $scope.doTestCheckout = function() {
+        $scope.testCheckout = function() {
             $log.debug("Creating testing charge");
             stripe.card.createToken({
                 number: 4242424242424242,
@@ -20,7 +20,7 @@ export class PayController {
                 createCharge(response);
             })
         };
-        // $scope.doTestCheckout();
+        // $scope.testCheckout();
 
         this.doCheckout = function(token) {
             $log.log("Got Stripe token: ", token.id);

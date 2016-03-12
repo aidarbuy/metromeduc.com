@@ -1,0 +1,8 @@
+Screen				Questions			Actions
+
+Make a payment		For what?			no
+
+Choose services		Why I need it?		maybe
+
+This service has 
+following features:

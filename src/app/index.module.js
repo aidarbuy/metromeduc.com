@@ -38,6 +38,7 @@ import { AboutFactory } from './about/about.fctr';
 
 // Services
 import { ServicesController } from './services/services.ctrl';
+import { Services2Controller } from './services2/services.ctrl';
 import { ServicesFactory } from './services/services.fctr';
 
 // Doctors
@@ -70,6 +71,9 @@ import { CalendarController } from './calendar/calendar.ctrl';
 import { PayController } from './pay/pay.ctrl';
 // import { StripeCheckout } from './pay/stripe.fctr';
 
+// Telemedicine
+import { TelemedController } from './telemed/telemed.ctrl';
+
 // Footer
 import { FooterDirective } from '../app/components/navigation/footer/footer.drct';
 import { GridBottomSheetCtrl } from '../app/components/navigation/footer/bottom-sheet.ctrl';
@@ -80,7 +84,8 @@ angular.module('metromed', [
     'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 
     'updateMeta', 'toastr', 'uiGmapgoogle-maps', 
     'djds4rce.angular-socialshare', 'firebase', 'stripe.checkout', 'angular-stripe',
-    'ui.calendar', 'angularLoad', 'angularPayments', 'angularSpinner'
+    'ui.calendar', 'angularLoad', 'angularPayments', 'angularSpinner',
+    'LocalStorageModule'
   ])
   .constant('malarkey', malarkey)
   .constant('moment', moment)
@@ -122,6 +127,7 @@ angular.module('metromed', [
 
   // Services
   .controller('ServicesController', ServicesController)
+  .controller('Services2Controller', Services2Controller)
   .factory('ServicesFactory', ServicesFactory)
 
   // Doctors
@@ -153,6 +159,9 @@ angular.module('metromed', [
   // Pay
   .controller('PayController', PayController)
   // .factory('StripeCheckout', StripeCheckout)
+
+  // Telemed
+  .controller('TelemedController', TelemedController)
 
   // Footer
   .controller('GridBottomSheetController', GridBottomSheetCtrl)

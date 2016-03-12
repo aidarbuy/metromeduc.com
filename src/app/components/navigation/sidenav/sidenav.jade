@@ -7,7 +7,7 @@
     p(hide-md show-gt-md) This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
 
 
-md-sidenav.md-sidenav-left.md-whiteframe-z2(layout="column" md-component-id="left" md-is-locked-ope="$mdMedia('gt-lg')")
+md-sidenav.md-sidenav-left.md-whiteframe-4dp(layout="column" md-component-id="left" md-is-locked-open="$mdMedia('xs')")
 
   //- Logo
   md-toolbar.md-hue-2(ng-click="tb.toggleSidenav('left')")
@@ -26,7 +26,7 @@ md-sidenav.md-sidenav-left.md-whiteframe-z2(layout="column" md-component-id="lef
     md-list-item(ng-repeat="i in sn.menu")
       md-button.md-primary.md-hue-2(ui-sref="{{::i.state}}" ng-click="sn.toggleSidenav('left', i.path)" aria-label="{{::i.title}}" ng-class="{'md-raised md-hue-3':sn.isSelected(i.path)}")
         .menu-item(layout="row" layout-align="start center")
-          md-icon(md-svg-src="assets/icons/{{::i.icon}}.svg" aria-label="{{::i.icon}}")
+          //- md-icon(md-svg-src="assets/icons/{{::i.icon}}.svg" aria-label="{{::i.icon}}")
           div(ng-bind="::i.title")
         md-divider
 

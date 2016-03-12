@@ -1,0 +1,30 @@
+toolbar
+
+
+	
+#services.md-padding
+	h1.md-display-1.md-primary-txt.center-txt Our Services
+	#result.md-body-1
+	div(layout="row" layout-wrap)
+		div.repeated-service(
+			ng-repeat="s in prices" 
+			flex-gt-md="25" 
+			flex-gt-xs="50" 
+			flex="100")
+			md-card.md-whiteframe-4dp
+				md-toolbar.md-hue-2(layout="row" layout-align="center center")
+					h2.md-headline(ng-bind="::s.title")
+				md-card-content(layout="column" layout-align="start center")
+					h3.md-display-3(ng-bind="'${{::s.price}}'")
+					h4.md-headline ONE TIME FEE
+					md-list
+						md-list-item(ng-repeat="i in s.list")
+							md-icon(md-svg-icon="assets/icons/checkmark.svg")
+							p(ng-bind="::i")
+							md-divider(ng-if="!$last")
+				md-card-actions(layout="row" layout-align="center center")
+					md-button.md-raised.md-primary.md-hue-3(
+						ng-click="addToCart($index)"
+						ng-disabled="::s.isButtonDisabled") Add to cart
+
+metromed-footer
